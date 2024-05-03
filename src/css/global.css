@@ -1,3 +1,4 @@
+/* FONTS */
 @font-face {
   font-family: Arial-Narrow-Bold-Italic;
   src: url("/fonts/Arial Narrow Bold Italic.ttf");
@@ -7,3 +8,6 @@
   font-family: Arial-Narrow;
   src: url("/fonts/Arial Narrow.ttf");
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+/* font-family: "Karla", sans-serif; */
