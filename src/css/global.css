@@ -1,13 +1,53 @@
 /* FONTS */
-@font-face {
-  font-family: Arial-Narrow-Bold-Italic;
+/* @font-face {
+  font-family: ANBI;
   src: url("/fonts/Arial Narrow Bold Italic.ttf");
 }
 
 @font-face {
-  font-family: Arial-Narrow;
+  font-family: AN;
   src: url("/fonts/Arial Narrow.ttf");
-}
+} */
 
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 /* font-family: "Karla", sans-serif; */
+
+:root {
+  /*Colors*/
+  --black-500: #000000;
+  --black-300: #686868;
+  --white: #ffffff;
+  --grey: #fffefe;
+
+  /*Font Sizes*/
+  --m_desc: 11px;
+  --m_product_text: 11px;
+  --m_button: 15px;
+  --m_text: 15px;
+  --m_h2: 20px;
+  --m_h1: 45px;
+
+  --w_checkout: 16px;
+  --w_desc: 17px;
+  --w_button: 20px;
+  --w_h2: 20px;
+  --w_footer: 20px;
+  --w_title_price: 20px;
+  --w_text: 25px;
+  --w_h1: 90px;
+
+  /*Font weights*/
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+  --extra-bold: 800;
+
+  /* Gap, Padding, Margin */
+  --margin: 50px;
+  --gap: 20px;
+}
+
+* {
+  margin: 0;
+}

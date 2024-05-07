@@ -6,21 +6,21 @@
   <a href="#">SHOP</a>
   <a href="#">ABOUT US</a>
   <a href="#"><img src="/assets/Logo_White.svg" alt="Cióió logo" /></a>
-  <a href="#">GALLERY</a>
   <a href="#">SEARCH</a>
+  <a href="#">CART (0)</a>
 </li>
 <style>
   a {
     text-decoration: none;
-    color: black;
-
+    color: var(--white);
     mix-blend-mode: difference;
     padding: 0 2rem;
-    font-family: Arial-Narrow;
-    font-size: 1.25rem;
+    font-family: Karla;
+    font-size: 1.5625rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: normal;
+    text-transform: uppercase;
   }
 
   li {
@@ -30,5 +30,15 @@
     align-items: center;
     padding-block: 1rem;
     position: fixed;
+    z-index: 9999999;
+    mix-blend-mode: difference;
+  }
+
+  rect {
+    mix-blend-mode: difference;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 </style>

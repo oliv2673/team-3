@@ -1,0 +1,140 @@
+---
+
+---
+
+<footer>
+  <div class="newsletter">
+    <p>NEWSLETTER</p>
+    <div class="newsbox">
+      <input
+        type="text"
+        class="textbox"
+        placeholder="Email address"
+        name="mail"
+        required
+      />
+      <button type="submit" class="submit">SUBMIT</button>
+    </div>
+  </div>
+  <div class="links">
+    <li>
+      <p>CIÓIÓ</p>
+      <a href="">Cart</a>
+      <a href="">Shop</a>
+      <a href="">About us</a>
+    </li>
+    <li>
+      <p>CUSTOMER SERVICE</p>
+      <a href="">FAQ</a>
+      <a href="">Returns</a>
+      <a href="">Care & size</a>
+      <a href="">Creation time</a>
+    </li>
+    <li>
+      <p>GET IN TOUCH</p>
+      <a href="">Email</a>
+      <a href="">Instagram</a>
+    </li>
+  </div>
+  <div class="logo">
+    <a href="" class="logo"><img src="../assets/Logo_White.svg" alt="" /></a>
+  </div>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 1.75rem 0rem;
+    flex-direction: column;
+    gap: 2.5em;
+    background: var(--black-500);
+  }
+  /* NEWSLETTER */
+  .newsletter p {
+    text-align: center;
+    padding-block: 15px;
+  }
+
+  .newsbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  input[type="text"] {
+    width: 40%;
+    padding: 15px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: "Karla";
+    font-size: 16px;
+  }
+
+  .textbox:focus {
+    outline: 2px solid rgba(0, 0, 0, 0.75);
+    outline-offset: -1px;
+  }
+
+  button {
+    border: 0 none;
+    color: var(--black-500);
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "Karla";
+    font-weight: var(--bold);
+    font-size: 16px;
+    background: none;
+    position: relative;
+    left: -80px;
+    margin-right: -80px;
+  }
+
+  button:hover {
+    text-decoration: underline;
+  }
+
+  /* LINKS */
+  .links {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+  }
+
+  a,
+  p {
+    text-decoration: none;
+    font-family: "Karla";
+    font-size: var(--w_footer);
+    color: var(--white);
+  }
+
+  a {
+    font-weight: var(--regular);
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  p {
+    font-weight: var(--bold);
+    padding-block: 15px;
+  }
+
+  /* LOGO */
+  .logo {
+    text-align: center;
+  }
+
+  .logo img {
+    width: 40%;
+  }
+</style>
