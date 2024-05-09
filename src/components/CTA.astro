@@ -1,0 +1,36 @@
+---
+const {text, link, state } = Astro.props;
+---
+
+<a class={state} href={link}>{text}</a>
+
+<style>
+
+a {
+    font-family: "Karla";
+    font-size: var(--w_button);
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    cursor: pointer;
+    
+
+}
+.primary {
+    color: var(--black-500);
+    border: var(--w_stroke) solid var(--black-500);
+    padding: 10px 40px 10px 40px;
+
+}
+
+.variant {
+    color: var(--white);
+    border: var(--w_stroke) solid var(--white);
+    padding: 10px 40px 10px 40px;
+}
+
+.primary:hover, .variant:hover {
+    background-color: var(--black-500);
+    color: var(--white);
+    border: var(--w_stroke) solid var(--black-500);
+}
+</style>
