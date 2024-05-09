@@ -1,10 +1,12 @@
 ---
-const { content } = Astro.props;
+const { jumplink } = Astro.props;
 ---
 
-<!-- <a href="#"><img src="../assets/treshhold.png" alt=""></a> -->
 <section>
-  <img src="/assets/Logo_White.svg" alt="Cióió logo" />
+  <img src="/assets/logo_white_outline.svg" class="logo" alt="Cióió logo" />
+  <a href={jumplink} class="arrow">
+    <img src="/assets/arrow.svg" class="arrow" alt="arrow pointing down" />
+  </a>
   <video autoplay loop muted>
     <source src="../assets/videos/headervid.mp4" type="video/mp4" />
     Your browser does not support the video tag.
@@ -12,12 +14,6 @@ const { content } = Astro.props;
 </section>
 
 <style>
-  img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-  }
-
   section {
     display: flex;
     justify-content: center;
@@ -26,6 +22,7 @@ const { content } = Astro.props;
     height: 100vh;
     overflow: hidden;
   }
+
   video {
     position: absolute;
     top: 0;
@@ -34,5 +31,36 @@ const { content } = Astro.props;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -100;
+  }
+
+  .arrow {
+    position: absolute;
+    bottom: 20px;
+    transition: opacity 1s ease-out;
+    mix-blend-mode: difference;
+    width: 50px;
+  }
+
+  .logo {
+    /*    mix-blend-mode: difference; */
+    width: 60%;
+  }
+
+  .fade {
+    opacity: 0;
   }
 </style>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const arrow = document.querySelector(".arrow");
+    if (arrow) {
+      if (window.scrollY > 0) {
+        arrow.classList.add("fade");
+      } else {
+        arrow.classList.remove("fade");
+      }
+    }
+  });
+</script>
