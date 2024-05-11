@@ -1,0 +1,43 @@
+---
+const {img1, alt1, img2, alt2, type } = Astro.props;
+---
+
+<section>
+    <img class={type} src={img1} alt={alt1}>
+    <img class={type} src={img2} alt={alt2}>
+</section>
+
+<style>
+    img {
+  height: 100%;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+    section {
+        max-width: 1000px;
+        display: grid; 
+    }
+
+    .type1:first-of-type {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+   }
+
+   .type1:last-of-type {
+   grid-column: 2 / span 2;
+   grid-row: 2 / span 2;
+   }
+
+
+   .type2:first-of-type {
+        grid-column: 2 / span 2; 
+        grid-row: 1 / span 2; 
+        z-index: 1;
+    }
+
+    .type2:last-of-type {
+        grid-column: 1 / span 2; 
+        grid-row: 2 / span 2; 
+    }
+</style>
