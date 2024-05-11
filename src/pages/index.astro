@@ -8,13 +8,27 @@ import Center_text_con from "../components/Center_text_con.astro";
 
 <Layout>
   <Hero jumplink="#testing" />
-  <section class="test2" id="testing"></section>
-  <section class="test"></section>
+  <section>
   <CTA text="about page" state="primary" link="/about"/>
   <CTA text="product page" state="primary" link="/product"/>
   <CTA text="shop page" state="primary" link="/shop"/>
+</section>
   <Center_text_con headline="One of a kind" text="Every Cióió piece is born from the hands in goldsmith Eva Thostrup Semblano’s atelier, crafted with care and attention to detail, every piece is truly one-of-a-kind."/>
   <Center_text_con headline="Crafted with Integrity" text="Authenticity lies at the heart of everything we do. We exclusively use ethically sourced materials, ensuring that each piece not only looks beautiful but also feels good to wear."/> 
   <Center_text_con headline="Make it your own" text="At Cióió, we believe in personalization. Our flexible customization options allow you to reimagine and tailor each piece to reflect your unique style and preferences."/> 
 </Layout>
 
+<style>
+  section {
+    max-width: 700px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    margin-block: var(--margin);
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+</style>
