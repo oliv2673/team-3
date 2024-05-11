@@ -1,0 +1,28 @@
+---
+const {headline, text, } = Astro.props;
+---
+
+<section>
+    <h3>{headline}</h3>
+    <p>{text}</p>
+</section>
+
+<style>
+    section {
+    max-width: 700px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    margin-block: var(--margin);
+    justify-content: center;
+    align-items: center;
+    }
+
+    p {
+        text-align: center;
+
+    }
+
+
+</style>

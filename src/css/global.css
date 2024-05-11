@@ -55,3 +55,35 @@
 * {
   margin: 0;
 }
+
+h1,
+h2,
+h3,
+p,
+a {
+  font-family: Karla;
+  color: var(--black-500);
+}
+
+h1 {
+  font-size: var(--w_h1);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--w_h2);
+}
+
+h3 {
+  font-size: var(--w_text);
+  text-transform: uppercase;
+}
+
+p {
+  font-size: var(--w_text);
+  color: var(--black-300);
+}
+
+a {
+  all: unset;
+}
