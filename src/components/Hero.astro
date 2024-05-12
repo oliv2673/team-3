@@ -1,9 +1,17 @@
 ---
+import CTA from "./CTA.astro";
 const { jumplink } = Astro.props;
 ---
 
 <section>
-  <img src="/assets/logo_white_outline.svg" class="logo" alt="Cióió logo" />
+  <div class="flex">
+    <div class="con">
+      <img src="/assets/logo_white_outline.svg" class="logo" alt="Cióió logo" />
+    </div>
+    <div class="con">
+      <CTA text="shop now" state="variant" link="/shop" />
+    </div>
+  </div>
   <a href={jumplink} class="arrow">
     <img src="/assets/arrow.svg" class="arrow" alt="arrow pointing down" />
   </a>
@@ -40,8 +48,16 @@ const { jumplink } = Astro.props;
     transition: opacity 1s ease-out;
     mix-blend-mode: difference;
     width: 50px;
+    cursor: pointer;
   }
-
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    gap: 4rem;
+  }
   .logo {
     /*    mix-blend-mode: difference; */
     width: 60%;

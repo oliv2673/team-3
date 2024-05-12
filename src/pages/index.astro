@@ -4,21 +4,57 @@ import Hero from "../components/Hero.astro";
 import CTA from "../components/CTA.astro";
 import Center_text_con from "../components/Center_text_con.astro";
 import Img_asym_con from "../components/Img_asym_con.astro";
-
+import InstaScroll from "../components/Insta_scroll.astro";
 ---
 
 <Layout>
   <Hero jumplink="#testing" />
   <section>
-  <CTA text="about page" state="primary" link="/about"/>
-  <CTA text="product page" state="primary" link="/product"/>
-  <CTA text="shop page" state="primary" link="/shop"/>
+    <CTA text="about page" state="primary" link="/about" />
+    <CTA text="product page" state="primary" link="/product" />
+    <CTA text="shop page" state="primary" link="/shop" />
   </section>
-  <section class="asym_con">  
-  <Img_asym_con img1="/assets/img/forside/forside2.webp" alt1="Onda Necklace, silver jewelry" img2="/assets/img/forside/forside5.webp" alt2="" type="type1"/></section>
-  <Center_text_con headline="Crafted with Integrity" text="Authenticity lies at the heart of everything we do. We exclusively use ethically sourced materials, ensuring that each piece not only looks beautiful but also feels good to wear."/> 
-  <Center_text_con headline="Make it your own" text="At Cióió, we believe in personalization. Our flexible customization options allow you to reimagine and tailor each piece to reflect your unique style and preferences."/> 
-  <section class="asym_con">  <Img_asym_con img1="/assets/img/forside/forside6.webp" alt1="Onda Necklace, silver jewelry" img2="/assets/img/forside/forside7.webp" alt2="" type="type2"/></section>
+  <section class="asym_con">
+    <Img_asym_con
+      img1="/assets/img/forside/forside2.webp"
+      alt1="Onda Necklace, silver jewelry"
+      img2="/assets/img/forside/forside5.webp"
+      alt2=""
+      type="type1"
+    />
+  </section>
+  <Center_text_con
+    headline="Crafted with Integrity"
+    text="Authenticity lies at the heart of everything we do. We exclusively use ethically sourced materials, ensuring that each piece not only looks beautiful but also feels good to wear."
+  />
+  <Center_text_con
+    headline="Make it your own"
+    text="At Cióió, we believe in personalization. Our flexible customization options allow you to reimagine and tailor each piece to reflect your unique style and preferences."
+  />
+  <section class="asym_con">
+    <Img_asym_con
+      img1="/assets/img/forside/forside6.webp"
+      alt1="Onda Necklace, silver jewelry"
+      img2="/assets/img/forside/forside7.webp"
+      alt2=""
+      type="type2"
+    />
+  </section>
+  <InstaScroll
+    title="OTHERS HAVE BOUGHT"
+    img1="/assets/img/othershavebought/foto1.webp"
+    alt1=""
+    img2="/assets/img/othershavebought/foto2.webp"
+    alt2=""
+    img3="/assets/img/othershavebought/foto3.webp"
+    alt3=""
+    img4="/assets/img/othershavebought/foto4.webp"
+    alt4=""
+    img5="/assets/img/othershavebought/foto5.webp"
+    alt5=""
+    img6="/assets/img/othershavebought/foto6.webp"
+    alt6=""
+  />
 </Layout>
 
 <style>
@@ -31,7 +67,5 @@ import Img_asym_con from "../components/Img_asym_con.astro";
     margin-block: var(--margin);
     justify-content: center;
     align-items: center;
-    
   }
-
 </style>
