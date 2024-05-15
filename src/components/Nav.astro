@@ -1,19 +1,21 @@
 ---
 
 ---
-<li>
-  <a href="/shop">SHOP</a>
-  <a href="/about">ABOUT US</a>
-  <a href="/"><img src="/assets/Logo_White.svg" alt="Cióió logo" /></a>
-  <a href="#">SEARCH</a>
-  <a href="#">CART (0)</a>
-</li>
+
+<ul>
+  <li>
+    <a href="/shop" class="underline">SHOP</a>
+    <a href="/about" class="underline">ABOUT US</a>
+    <a href="/"><img src="/assets/Logo_White.svg" alt="Cióió logo" /></a>
+    <a href="#" class="underline">SEARCH</a>
+    <a href="#" class="underline">CART (0)</a>
+  </li>
+</ul>
 <style>
   a {
     text-decoration: none;
     color: var(--white);
     mix-blend-mode: difference;
-    padding: 0 2rem;
     font-family: Karla;
     font-size: 1.5625rem;
     font-style: normal;
@@ -21,24 +23,47 @@
     line-height: normal;
     text-transform: uppercase;
     cursor: pointer;
+
+    position: relative;
+    display: inline-block;
   }
 
+  .underline::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    transition: width 0.3s ease;
+  }
+
+  .underline:hover::after {
+    width: 100%;
+  }
   li {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding-block: 1rem;
     position: fixed;
     z-index: 9999999;
     mix-blend-mode: difference;
+    /* gap: 20px; */
+  }
+
+  ul {
+    padding: 0rem;
   }
 
   rect {
     mix-blend-mode: difference;
   }
 
-  a:hover {
+  /*   a:hover {
     text-decoration: underline;
-  }
+  } */
 </style>

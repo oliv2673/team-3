@@ -32,7 +32,7 @@
   --w_button: 20px;
   --w_h2: 20px;
   --w_footer: 20px;
-  --w_title_price: 20px;
+  --w_price: 20px;
   --w_text: 25px;
   --w_h1: 90px;
 
@@ -87,3 +87,5 @@ p {
 a {
   all: unset;
 }
+
+

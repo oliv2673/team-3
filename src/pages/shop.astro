@@ -2,9 +2,35 @@
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
 import CTA from "../components/CTA.astro";
-
+import ProductCard from "../components/Product_card.astro";
 ---
 
 <Layout>
-    <h1>Shop</h1> 
+  <h1>Shop</h1>
+  <section>
+    <ProductCard
+      name="testnavn"
+      price="testprice"
+      img="/assets/img/shop/forside1.webp"
+    />
+    <ProductCard
+      name="testnavn"
+      price="testprice"
+      img="/assets/img/shop/forside1.webp"
+      hover="/assets/img/hoverphotosshop/amorcharm.webp"
+    />
+    <ProductCard
+      name="testnavn"
+      price="testprice"
+      img="/assets/img/shop/forside1.webp"
+    />
+  </section>
 </Layout>
+
+<style>
+  section {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+</style>
