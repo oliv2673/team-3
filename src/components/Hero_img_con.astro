@@ -1,0 +1,35 @@
+---
+const {hero_img, hero_alt } = Astro.props;
+---
+
+<section class="hero-section">
+  <img src={hero_img} alt={hero_alt} class="hero-img">
+</section>
+
+<style>
+    img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+  .hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .hero-img {
+    position: absolute;
+    object-fit: cover;
+  }
+
+  .arrow {
+    position: absolute;
+    bottom: 20px;
+    transition: opacity 1s ease-out;
+    mix-blend-mode: difference;
+    width: 50px;
+    cursor: pointer;
+  }
+</style>
