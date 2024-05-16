@@ -14,12 +14,12 @@ import InstaScroll from "../components/Insta_scroll.astro";
     <CTA text="product page" state="primary" link="/product" />
     <CTA text="shop page" state="primary" link="/shop" />
   </section>
-<Center_text_con
+  <Center_text_con
   headline="One of a kind"
   text="Every Cióió piece is born from the hands in goldsmith Eva Thostrup Semblano’s atelier, crafted with care and attention to detail, every piece is truly one-of-a-kind."
-/>
-  <section id="#jump-1">
-    <img src="/assets/img/forside/forside1.webp" alt="handmodel wearing Anél and Onda silver jewlery ring">
+  />
+  <section>
+    <img class="img_style" src="/assets/img/forside/forside1.webp" alt="handmodel wearing Anél and Onda silver jewlery ring">
   </section>
   <section class="asym_con">
     <Img_asym_con
@@ -29,13 +29,15 @@ import InstaScroll from "../components/Insta_scroll.astro";
       alt2=""
       type="type1"
     />
+    <div class="position_con_star"><img class="img_style" src="/assets/img/forside/frit-star.webp" alt=""></div>
+    
   </section>
   <Center_text_con
     headline="Crafted with Integrity"
     text="Authenticity lies at the heart of everything we do. We exclusively use ethically sourced materials, ensuring that each piece not only looks beautiful but also feels good to wear."
   />
   <section>
-    <img src="/assets/img/forside/forside4.webp" alt="model wearing Onda ring and boots">
+    <img class="img_style" src="/assets/img/forside/forside4.webp" alt="model wearing Onda ring and boots">
   </section>
   <Center_text_con
     headline="Make it your own"
@@ -70,9 +72,6 @@ import InstaScroll from "../components/Insta_scroll.astro";
 
 
 
-
-
-
 <style>
   section {
     max-width: 1000px;
@@ -84,6 +83,34 @@ import InstaScroll from "../components/Insta_scroll.astro";
     justify-content: center;
     align-items: center;
   }
+
+  .img_style {
+  height: 100%;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.asym_con {
+  position: relative;
+
+}
+.position_con_star {
+  height: 30vw;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: rotate(-95deg);
+}
+
+.position_con_ring {
+  height: 30vw;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: rotate(-95deg);
+}
+
+
 
 
 </style>
