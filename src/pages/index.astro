@@ -18,8 +18,9 @@ import InstaScroll from "../components/Insta_scroll.astro";
   headline="One of a kind"
   text="Every Cióió piece is born from the hands in goldsmith Eva Thostrup Semblano’s atelier, crafted with care and attention to detail, every piece is truly one-of-a-kind."
   />
-  <section>
+  <section class="big_img_con">
     <img class="img_style" src="/assets/img/forside/forside1.webp" alt="handmodel wearing Anél and Onda silver jewlery ring">
+    <div class="button_position"><CTA text="Shop now" state="variant" link="/shop" /></div>
   </section>
   <section class="asym_con">
     <Img_asym_con
@@ -91,10 +92,17 @@ import InstaScroll from "../components/Insta_scroll.astro";
   width: 100%;
   object-fit: cover;
 }
-.asym_con {
+.asym_con, .big_img_con {
   position: relative;
 
 }
+
+.button_position {
+  position: absolute;
+  bottom: 60px;
+
+}
+
 .position_con_star {
   height: 30%;
   position: absolute;
@@ -104,11 +112,12 @@ import InstaScroll from "../components/Insta_scroll.astro";
 }
 
 .position_con_ring {
-  height: 30%;
+  height: 28%;
   position: absolute;
-  top: -10vw;
+  top: -6vw;
   right: 2vw;
 }
+
 
 
 
