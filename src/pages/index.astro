@@ -38,8 +38,9 @@ import InstaScroll from "../components/Insta_scroll.astro";
     headline="Crafted with Integrity"
     text="Authenticity lies at the heart of everything we do. We exclusively use ethically sourced materials, ensuring that each piece not only looks beautiful but also feels good to wear."
   />
-  <section>
+  <section class="big_img_con">
     <img class="img_style" src="/assets/img/forside/forside4.webp" alt="model wearing Onda ring and boots">
+    <div class="position_con_shell"><img class="img_style" src="/assets/img/forside/frit-shell.webp" alt=""></div>
   </section>
   <Center_text_con
     headline="Make it your own"
@@ -53,6 +54,8 @@ import InstaScroll from "../components/Insta_scroll.astro";
       alt2=""
       type="type2"
     />
+    <div class="position_con_necklace"><img class="img_style" src="/assets/img/forside/frit-olho.webp" alt=""></div>
+
   </section>
   <InstaScroll
     title="OTHERS HAVE BOUGHT"
@@ -116,6 +119,19 @@ import InstaScroll from "../components/Insta_scroll.astro";
   position: absolute;
   top: -6vw;
   right: 2vw;
+}
+.position_con_shell {
+  height: 32%;
+  position: absolute;
+  top: -7vw;
+  right: -1vw;
+}
+.position_con_necklace {
+  height: 40%;
+  position: absolute;
+  top: -4vw;
+  left: 0;
+  transform: rotate(-30deg);
 }
 
 
