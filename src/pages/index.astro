@@ -9,11 +9,6 @@ import InstaScroll from "../components/Insta_scroll.astro";
 
 <Layout>
   <Hero jumplink="#testing" />
-  <section>
-    <CTA text="about page" state="primary" link="/about" />
-    <CTA text="product page" state="primary" link="/product" />
-    <CTA text="shop page" state="primary" link="/shop" />
-  </section>
   <Center_text_con
   headline="One of a kind"
   text="Every Cióió piece is born from the hands in goldsmith Eva Thostrup Semblano’s atelier, crafted with care and attention to detail, every piece is truly one-of-a-kind."
@@ -21,6 +16,8 @@ import InstaScroll from "../components/Insta_scroll.astro";
   <section class="big_img_con">
     <img class="img_style" src="/assets/img/forside/forside1.webp" alt="handmodel wearing Anél and Onda silver jewlery ring">
     <div class="button_position"><CTA text="Shop now" state="variant" link="/shop" /></div>
+    <div class="position_con_ring"><img class="img_style" src="/assets/img/forside/frit-anel.webp" alt=""></div>
+
   </section>
   <section class="asym_con">
     <Img_asym_con
@@ -30,7 +27,6 @@ import InstaScroll from "../components/Insta_scroll.astro";
       alt2=""
       type="type1"
     />
-    <div class="position_con_ring"><img class="img_style" src="/assets/img/forside/frit-anel.webp" alt=""></div>
     <div class="position_con_star"><img class="img_style" src="/assets/img/forside/frit-star.webp" alt=""></div>
     
   </section>
@@ -111,14 +107,14 @@ import InstaScroll from "../components/Insta_scroll.astro";
   position: absolute;
   bottom: 3vw;
   left: 2vw;
-  transform: rotate(-95deg);
+  transform: rotate(-80deg);
 }
 
 .position_con_ring {
   height: 28%;
   position: absolute;
-  top: -6vw;
-  right: 2vw;
+  bottom: -14vw;
+  right: 4vw;
 }
 .position_con_shell {
   height: 32%;
