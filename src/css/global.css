@@ -87,3 +87,17 @@ p {
 a {
   all: unset;
 }
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: var(--m_h1);
+  }
+
+  h2 {
+    font-size: var(--m_h2);
+  }
+  h3,
+  p {
+    font-size: var(--m_text);
+  }
+}
