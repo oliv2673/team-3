@@ -68,6 +68,7 @@ a {
 h1 {
   font-size: var(--w_h1);
   text-transform: uppercase;
+  font-weight: var(--extra-bold);
 }
 
 h2 {
