@@ -20,8 +20,8 @@
     <li>
       <p>CIÓIÓ</p>
       <a href="">Cart</a>
-      <a href="">Shop</a>
-      <a href="">About us</a>
+      <a href="/shop">Shop</a>
+      <a href="/about">About us</a>
     </li>
     <li>
       <p>CUSTOMER SERVICE</p>
@@ -138,5 +138,17 @@
 
   .logo img {
     width: 40%;
+  }
+
+  @media (max-width: 700px) {
+    .links {
+    flex-direction: column;
+
+  }
+  li {
+    align-items: center;
+    
+  }
+
   }
 </style>
