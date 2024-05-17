@@ -45,6 +45,7 @@
 
   /* Gap, Padding, Margin */
   --margin: 120px;
+  --m_margin: 50px;
   --gap: 20px;
 
   /* Stroke / line weight */
