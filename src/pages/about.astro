@@ -41,6 +41,7 @@ import Center_text_con from "../components/Center_text_con.astro";
 
 <style>
   section {
+    margin-block: var(--margin);
     margin-inline: auto;
     max-width: 1000px;
   }
@@ -75,7 +76,6 @@ import Center_text_con from "../components/Center_text_con.astro";
   .proces {
     display: grid;
     gap: var(--gap);
-    background-color: aqua;
   }
 
   .grid_proces {
@@ -89,6 +89,9 @@ import Center_text_con from "../components/Center_text_con.astro";
     .grid_proces {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+  }
+  section {
+    margin-block: var(--m_margin);
   }
   
 
