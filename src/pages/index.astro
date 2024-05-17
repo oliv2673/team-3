@@ -45,6 +45,9 @@ import InstaScroll from "../components/Insta_scroll.astro";
     <div class="position_con_star">
       <img class="img_style" src="/assets/img/forside/frit-star.webp" alt="" />
     </div>
+    <div class="position_con_heart">
+      <img class="img_style" src="/assets/img/forside/frit-heart.webp" alt="" />
+    </div>
   </section>
   <Center_text_con
     headline="Crafted with Integrity"
@@ -74,6 +77,9 @@ import InstaScroll from "../components/Insta_scroll.astro";
     />
     <div class="position_con_necklace">
       <img class="img_style" src="/assets/img/forside/frit-olho.webp" alt="" />
+    </div>
+    <div class="position_con_bracelet">
+      <img class="img_style" src="/assets/img/forside/frit-bracelet.webp" alt="" />
     </div>
   </section>
   <InstaScroll
@@ -120,13 +126,20 @@ import InstaScroll from "../components/Insta_scroll.astro";
     position: absolute;
     bottom: 60px;
   }
-
   .position_con_star {
-    height: 30%;
+    height: 28%;
     position: absolute;
-    bottom: 3vw;
+    bottom: 13vw;
     left: 2vw;
     transform: rotate(-80deg);
+  }
+
+  .position_con_heart {
+    height: 40%;
+    position: absolute;
+    bottom: -4vw;
+    right: -8vw;
+    transform: scaleX(-1) rotate(10deg);
   }
 
   .position_con_ring {
@@ -147,10 +160,29 @@ import InstaScroll from "../components/Insta_scroll.astro";
     top: -4vw;
     left: 0;
     transform: rotate(-30deg);
+    z-index: 10;
+  }
+  .position_con_bracelet {
+    height: 45%;
+    position: absolute;
+    bottom: 7vw;
+    right: 5vw;
+    z-index: 10;
+    
+    transform: rotate(-157deg);
+
   }
 
   #scrolldown {
     margin-block: 0;
   }
+  
+  @media (max-width: 1050px) {
+  .position_con_necklace {
+    left: 3vw; 
+  }
+  
+
+}
 
 </style>
