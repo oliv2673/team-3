@@ -2,12 +2,16 @@
 import Layout from "../layouts/Layout.astro";
 import CTA from "../components/CTA.astro";
 import ProductCard from "../components/Product_card.astro";
-import Hero from "../components/Hero_img_con.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout>
-  <Hero hero_img="/assets/img/shop/headerfoto.webp" h1_text="Shop" />
-  <section>
+  <Hero
+    img="/assets/img/shop/headerfoto.webp"
+    title="Shop"
+    jumplink="#products"
+  />
+  <section id="products">
     <ProductCard
       name="testnavn"
       price="testprice"

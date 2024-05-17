@@ -1,0 +1,68 @@
+---
+const { jumplink, img1, img2, img3, alt1, alt2, alt3 } = Astro.props;
+---
+
+<div class="con" id="drag">
+  <img src={img1} alt={alt1} />
+  <img src={img2} alt={alt2} />
+  <img src={img3} alt={alt3} />
+</div>
+
+<style>
+  .con {
+    overflow-x: scroll;
+    display: flex;
+    white-space: nowrap;
+    cursor: grab;
+  }
+
+  img {
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .con::-webkit-scrollbar {
+    background: white;
+    width: 16px;
+  }
+
+  .con::-webkit-scrollbar-thumb {
+    background-color: var(--black-300);
+    border-radius: 16px;
+    border: 4px solid #fff;
+  }
+
+  .con::-webkit-scrollbar-thumb:hover {
+    background-color: var(--black-500);
+  }
+</style>
+
+<script>
+  const container = document.getElementById("drag");
+  let isMouseDown = false;
+  let startX;
+  let scrollLeft;
+
+  container.addEventListener("mousedown", (e) => {
+    isMouseDown = true;
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+  });
+
+  container.addEventListener("mouseleave", () => {
+    isMouseDown = false;
+  });
+
+  container.addEventListener("mouseup", () => {
+    isMouseDown = false;
+  });
+
+  container.addEventListener("mousemove", (e) => {
+    if (!isMouseDown) return;
+    e.preventDefault();
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - startX) * 1; // Hvor hurtigt den scroller
+    container.scrollLeft = scrollLeft - walk;
+  });
+</script>

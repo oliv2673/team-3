@@ -8,16 +8,31 @@ import InstaScroll from "../components/Insta_scroll.astro";
 ---
 
 <Layout>
-  <Hero jumplink="#testing" />
-  <Center_text_con
-  headline="One of a kind"
-  text="Every Cióió piece is born from the hands in goldsmith Eva Thostrup Semblano’s atelier, crafted with care and attention to detail, every piece is truly one-of-a-kind."
+  <Hero
+    jumplink="#scrolldown"
+    video="/assets/videos/headervid.mp4"
+    logo="/assets/logo_white_outline.svg"
+    showlogo="showlogo"
+    showcta="showcta"
   />
+  <section id="scrolldown">
+    <Center_text_con
+      headline="One of a kind"
+      text="Every Cióió piece is born from the hands in goldsmith Eva Thostrup Semblano’s atelier, crafted with care and attention to detail, every piece is truly one-of-a-kind."
+    />
+  </section>
   <section class="big_img_con">
-    <img class="img_style" src="/assets/img/forside/forside1.webp" alt="handmodel wearing Anél and Onda silver jewlery ring">
-    <div class="button_position"><CTA text="Shop now" state="variant" link="/shop" /></div>
-    <div class="position_con_ring"><img class="img_style" src="/assets/img/forside/frit-anel.webp" alt=""></div>
-
+    <img
+      class="img_style"
+      src="/assets/img/forside/forside1.webp"
+      alt="handmodel wearing Anél and Onda silver jewlery ring"
+    />
+    <div class="button_position">
+      <CTA text="Shop now" state="variant" link="/shop" />
+    </div>
+    <div class="position_con_ring">
+      <img class="img_style" src="/assets/img/forside/frit-anel.webp" alt="" />
+    </div>
   </section>
   <section class="asym_con">
     <Img_asym_con
@@ -27,16 +42,23 @@ import InstaScroll from "../components/Insta_scroll.astro";
       alt2=""
       type="type1"
     />
-    <div class="position_con_star"><img class="img_style" src="/assets/img/forside/frit-star.webp" alt=""></div>
-    
+    <div class="position_con_star">
+      <img class="img_style" src="/assets/img/forside/frit-star.webp" alt="" />
+    </div>
   </section>
   <Center_text_con
     headline="Crafted with Integrity"
     text="Authenticity lies at the heart of everything we do. We exclusively use ethically sourced materials, ensuring that each piece not only looks beautiful but also feels good to wear."
   />
   <section class="big_img_con">
-    <img class="img_style" src="/assets/img/forside/forside4.webp" alt="model wearing Onda ring and boots">
-    <div class="position_con_shell"><img class="img_style" src="/assets/img/forside/frit-shell.webp" alt=""></div>
+    <img
+      class="img_style"
+      src="/assets/img/forside/forside4.webp"
+      alt="model wearing Onda ring and boots"
+    />
+    <div class="position_con_shell">
+      <img class="img_style" src="/assets/img/forside/frit-shell.webp" alt="" />
+    </div>
   </section>
   <Center_text_con
     headline="Make it your own"
@@ -50,8 +72,9 @@ import InstaScroll from "../components/Insta_scroll.astro";
       alt2=""
       type="type2"
     />
-    <div class="position_con_necklace"><img class="img_style" src="/assets/img/forside/frit-olho.webp" alt=""></div>
-
+    <div class="position_con_necklace">
+      <img class="img_style" src="/assets/img/forside/frit-olho.webp" alt="" />
+    </div>
   </section>
   <InstaScroll
     title="OTHERS HAVE BOUGHT"
@@ -70,9 +93,6 @@ import InstaScroll from "../components/Insta_scroll.astro";
   />
 </Layout>
 
-
-
-
 <style>
   section {
     max-width: 1000px;
@@ -86,49 +106,51 @@ import InstaScroll from "../components/Insta_scroll.astro";
   }
 
   .img_style {
-  height: 100%;
-  display: block;
-  width: 100%;
-  object-fit: cover;
-}
-.asym_con, .big_img_con {
-  position: relative;
-}
+    height: 100%;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+  .asym_con,
+  .big_img_con {
+    position: relative;
+    margin-top: 0;
+  }
 
-.button_position {
-  position: absolute;
-  bottom: 60px;
+  .button_position {
+    position: absolute;
+    bottom: 60px;
+  }
 
-}
+  .position_con_star {
+    height: 30%;
+    position: absolute;
+    bottom: 3vw;
+    left: 2vw;
+    transform: rotate(-80deg);
+  }
 
-.position_con_star {
-  height: 30%;
-  position: absolute;
-  bottom: 3vw;
-  left: 2vw;
-  transform: rotate(-80deg);
-}
+  .position_con_ring {
+    height: 28%;
+    position: absolute;
+    bottom: -10vw;
+    right: 4vw;
+  }
+  .position_con_shell {
+    height: 34%;
+    position: absolute;
+    top: -6vw;
+    right: -1vw;
+  }
+  .position_con_necklace {
+    height: 40%;
+    position: absolute;
+    top: -4vw;
+    left: 0;
+    transform: rotate(-30deg);
+  }
 
-.position_con_ring {
-  height: 28%;
-  position: absolute;
-  bottom: -10vw;
-  right: 4vw;
-}
-.position_con_shell {
-  height: 34%;
-  position: absolute;
-  top: -6vw;
-  right: -1vw;
-}
-.position_con_necklace {
-  height: 40%;
-  position: absolute;
-  top: -4vw;
-  left: 0;
-  transform: rotate(-30deg);
-}
-
-
-
+  #scrolldown {
+    margin-block: 0;
+  }
 </style>

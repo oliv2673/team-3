@@ -1,23 +1,28 @@
 ---
-const {hero_img, hero_alt, h1_text, jumplink } = Astro.props;
+const { hero_img, hero_alt, h1_text, jumplink } = Astro.props;
 ---
 
 <section class="hero-section">
-  <img src={hero_img} alt={hero_alt}>
+  <img src={hero_img} alt={hero_alt} />
   <div class="hero_con">
     <div class="grid_con">
-    <h1>{h1_text}</h1>
-    <a href={jumplink} class="arrow">
-    <img src="/assets/arrow.svg" class="arrow" alt="arrow pointing down" /></a>
+      <h1>{h1_text}</h1>
+      <a href={jumplink} class="arrow">
+        <img
+          src="/assets/arrow.svg"
+          class="arrow"
+          alt="arrow pointing down"
+        /></a
+      >
     </div>
   </div>
 </section>
 
 <style>
-img {
-  width: 100vw;
-  display: block;
-}
+  img {
+    width: 100vw;
+    display: block;
+  }
   .hero-section {
     position: relative;
     height: 100vh;
@@ -30,9 +35,7 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)
-
-
+    transform: translate(-50%, -50%);
   }
 
   .grid_con {

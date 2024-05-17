@@ -1,22 +1,25 @@
 ---
 import CTA from "./CTA.astro";
-const { jumplink } = Astro.props;
+const { jumplink, img, alt, logo, video, title, showlogo, showcta } =
+  Astro.props;
 ---
 
 <section>
   <div class="flex">
     <div class="con">
-      <img src="/assets/logo_white_outline.svg" class="logo" alt="Cióió logo" />
+      <img src={logo} class="logo hide" id={showlogo} alt="Cióió logo" />
+      <h1>{title}</h1>
     </div>
-    <div class="con">
+    <div class="con hide" id={showcta}>
       <CTA text="shop now" state="variant" link="/shop" />
     </div>
   </div>
   <a href={jumplink} class="arrow">
     <img src="/assets/arrow.svg" class="arrow" alt="arrow pointing down" />
   </a>
+  <img src={img} alt={alt} class="image" />
   <video autoplay loop muted>
-    <source src="../assets/videos/headervid.mp4" type="video/mp4" />
+    <source src={video} type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 </section>
@@ -32,6 +35,16 @@ const { jumplink } = Astro.props;
   }
 
   video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -100;
+  }
+  .image {
     position: absolute;
     top: 0;
     left: 0;
@@ -61,14 +74,21 @@ const { jumplink } = Astro.props;
   .logo {
     /*    mix-blend-mode: difference; */
     width: 60%;
-    margin-inline: auto;    
+    margin-inline: auto;
   }
 
   .fade {
     opacity: 0;
   }
 
+  .hide {
+    display: none;
+  }
 
+  #showlogo,
+  #showcta {
+    display: block;
+  }
 </style>
 
 <script>
