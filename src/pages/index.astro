@@ -5,6 +5,8 @@ import CTA from "../components/CTA.astro";
 import Center_text_con from "../components/Center_text_con.astro";
 import Img_asym_con from "../components/Img_asym_con.astro";
 import InstaScroll from "../components/Insta_scroll.astro";
+import ProductCard from "../components/Product_card.astro";
+import ProductsSlider from "../components/Products_slider.astro";
 ---
 
 <Layout>
@@ -63,10 +65,13 @@ import InstaScroll from "../components/Insta_scroll.astro";
       <img class="img_style" src="/assets/img/forside/frit-shell.webp" alt="" />
     </div>
   </section>
-  <Center_text_con
-    headline="Make it your own"
-    text="At Cióió, we believe in personalization. Our flexible customization options allow you to reimagine and tailor each piece to reflect your unique style and preferences."
-  />
+  <ProductsSlider />
+  <section class="makeit">
+    <Center_text_con
+      headline="Make it your own"
+      text="At Cióió, we believe in personalization. Our flexible customization options allow you to reimagine and tailor each piece to reflect your unique style and preferences."
+    />
+  </section>
   <section class="asym_con">
     <Img_asym_con
       img1="/assets/img/forside/back-olho.webp"
@@ -79,7 +84,11 @@ import InstaScroll from "../components/Insta_scroll.astro";
       <img class="img_style" src="/assets/img/forside/frit-olho.webp" alt="" />
     </div>
     <div class="position_con_bracelet">
-      <img class="img_style" src="/assets/img/forside/frit-bracelet.webp" alt="" />
+      <img
+        class="img_style"
+        src="/assets/img/forside/frit-bracelet.webp"
+        alt=""
+      />
     </div>
   </section>
   <InstaScroll
@@ -96,6 +105,10 @@ import InstaScroll from "../components/Insta_scroll.astro";
     alt5=""
     img6="/assets/img/othershavebought/foto6.webp"
     alt6=""
+    img7="/assets/img/followusoninsta/foto4.webp"
+    alt7=""
+    img8="/assets/img/followusoninsta/foto3.webp"
+    alt8=""
   />
 </Layout>
 
@@ -168,21 +181,20 @@ import InstaScroll from "../components/Insta_scroll.astro";
     bottom: 7vw;
     right: 5vw;
     z-index: 10;
-    
-    transform: rotate(-157deg);
 
+    transform: rotate(-157deg);
   }
 
+  .makeit {
+    margin-top: -120px;
+  }
   #scrolldown {
     margin-block: 0;
   }
-  
+
   @media (max-width: 1050px) {
-  .position_con_necklace {
-    left: 3vw; 
+    .position_con_necklace {
+      left: 3vw;
+    }
   }
-  
-
-}
-
 </style>

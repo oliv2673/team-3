@@ -9,32 +9,157 @@ import Hero from "../components/Hero.astro";
   <Hero
     img="/assets/img/shop/headerfoto.webp"
     title="Shop"
-    jumplink="#products"
+    jumplink="#productshowcase"
   />
-  <section id="products">
+  <section id="productshowcase">
     <ProductCard
-      name="testnavn"
-      price="testprice"
+      name="ACRO NECKLACE & AMOR CHARM"
+      price="5300"
       img="/assets/img/shop/forside1.webp"
+      hover="/assets/img/hoverphotosshop/acronecklace_amorchain.webp"
     />
     <ProductCard
-      name="testnavn"
-      price="testprice"
-      img="/assets/img/shop/forside1.webp"
+      name="ANÈL RING"
+      price="2200"
+      img="/assets/img/shop/shop2.webp"
+      hover="/assets/img/hoverphotosshop/anelring.webp"
+    />
+    <ProductCard
+      name="ANÇITI CHARM"
+      price="1100"
+      img="/assets/img/shop/shop3.webp"
+      hover="/assets/img/hoverphotosshop/anciticharm.webp"
+    />
+
+    <ProductCard
+      name="Lago Bracelet"
+      price="5300"
+      img="/assets/img/shop/forside4.webp"
+      hover="/assets/img/hoverphotosshop/lagobracelet.webp"
+    />
+    <ProductCard
+      name="Olho Necklace"
+      price="3700"
+      img="/assets/img/shop/forside5.webp"
+      hover="/assets/img/hoverphotosshop/olhonecklace.webp"
+    />
+    <ProductCard
+      name="Amor Charm"
+      price="1100"
+      img="/assets/img/shop/forside6.webp"
       hover="/assets/img/hoverphotosshop/amorcharm.webp"
     />
-    <ProductCard
-      name="testnavn"
-      price="testprice"
-      img="/assets/img/shop/forside1.webp"
+  </section>
+  <section class="bigimg">
+    <img
+      src="/assets/img/shop/bigimg.webp"
+      alt="picture of a hand with cioio jewelry on"
     />
+  </section>
+  <section class="bottom">
+    <ProductCard
+      name="ANÇITI CHARM & CIÒIÒ CHAIN"
+      price="1750"
+      img="/assets/img/shop/forside7.webp"
+      hover="/assets/img/hoverphotosshop/anciticharm_cioiochain.webp"
+    />
+    <ProductCard
+      name="Acro Neckring"
+      price="2900"
+      img="/assets/img/shop/forside8.webp"
+      hover="/assets/img/hoverphotosshop/acroneckring.webp"
+    />
+    <ProductCard
+      name="Charm"
+      price="1100"
+      img="/assets/img/shop/forside9.webp"
+      hover="/assets/img/hoverphotosshop/ohlocharm.webp"
+    />
+    <ProductCard
+      name="Mar charm"
+      price="1100"
+      img="/assets/img/shop/forside10.webp"
+      hover="/assets/img/hoverphotosshop/marcharm.webp"
+    />
+    <ProductCard
+      name="Onda ring"
+      price="1500"
+      img="/assets/img/shop/forside11.webp"
+      hover="/assets/img/hoverphotosshop/ondaring.webp"
+    />
+    <ProductCard
+      name="Asa lock bracelet"
+      price="3250"
+      img="/assets/img/shop/forside12.webp"
+      hover="/assets/img/hoverphotosshop/asalockbracelet.webp"
+    />
+  </section>
+
+  <section class="imgx2">
+    <img src="/assets/img/shop/foto1.webp" class="desk_img" alt="" />
+
+    <img src="/assets/img/shop/foto2.webp" class="desk_img" alt="" />
+    <img src="/assets/img/shop/botbanner.webp" class="mobile_img" alt="" />
   </section>
 </Layout>
 
 <style>
   section {
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin-inline: auto;
     justify-content: space-evenly;
+    gap: var(--gap);
+    padding-block: var(--margin);
+  }
+  .bottom,
+  #productshowcase {
+    padding-bottom: 0;
+  }
+
+  .bigimg {
+    padding: 0;
+  }
+
+  .imgx2 {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0;
+    margin-bottom: var(--margin);
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .imgx2 img {
+    height: 360px;
+    width: 360px;
+  }
+
+  .mobile_img {
+    display: none;
+  }
+
+  @media (max-width: 715px) {
+    .mobile_img {
+      display: block;
+    }
+
+    .desk_img {
+      display: none;
+    }
+    .imgx2 img {
+      height: auto;
+      width: 100%;
+    }
+    .imgx2 {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
   }
 </style>
