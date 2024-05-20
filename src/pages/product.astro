@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import CTA from "../components/CTA.astro";
 import Slider from "../components/Product_page_slider.astro";
-import Size from "../components/Select_size.astro";
 import SelectSize from "../components/Select_size.astro";
 import InstaScroll from "../components/Insta_scroll.astro";
 
@@ -36,7 +35,7 @@ import InstaScroll from "../components/Insta_scroll.astro";
       <SelectSize state="primary" number="59"/>
       <SelectSize state="primary" number="61"/>
     </div>
-    <div>
+    <div class="cta_con">
       <CTA text="Shop now" state="primary" />
     </div>
   </section>
@@ -74,7 +73,6 @@ import InstaScroll from "../components/Insta_scroll.astro";
   alt8=""
 />
 </Layout>
-</Layout>
 
 
 <style>
@@ -84,7 +82,7 @@ import InstaScroll from "../components/Insta_scroll.astro";
   .p_small_black {
     color: var(--black-500);
     text-wrap: nowrap;
-    align-self: center;
+    padding: 10px;
   }
 
 
@@ -92,24 +90,23 @@ import InstaScroll from "../components/Insta_scroll.astro";
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: var(--m_margin);
+    margin: 20px 20px 0px 20px;
   }
 
 .size {
   display: flex;
   flex-direction: row;
-  margin-block: auto;
+  margin-bottom: auto;
 }
-
 .info_con, .info_text_con {
     max-width: 700px;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
     gap: var(--gap);
-    margin-block: var(--margin);
     justify-content: center;
     align-items: center;
+    margin-block: var(--m_margin);
     }
 
     .align_c {
@@ -119,6 +116,7 @@ import InstaScroll from "../components/Insta_scroll.astro";
 
     .button_h3_con {
       display: flex;
-      align-items: space-between;
+      flex-direction: row;
+      gap: 10vw;
     }
 </style>
