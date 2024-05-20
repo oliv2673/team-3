@@ -4,6 +4,8 @@ import CTA from "../components/CTA.astro";
 import Slider from "../components/Product_page_slider.astro";
 import Size from "../components/Select_size.astro";
 import SelectSize from "../components/Select_size.astro";
+import InstaScroll from "../components/Insta_scroll.astro";
+
 
 
 ---
@@ -14,23 +16,64 @@ import SelectSize from "../components/Select_size.astro";
     img2="/assets/img/productphotos/ondaring2.webp"
     img3="/assets/img/productphotos/ondaring3.webp"
   />
-  <section>
+  <section class="product">
     <div class="productDesc">
       <h3>Onda ring</h3>
-      <p>1500DKK</p>
+      <p>1500 DKK</p>
       <div class="seeMore">
       <p class="p_small">See more about this product</p>
       <img src="/assets/arrow.svg" alt="arrow button for more information">
     </div>
+    </div>
     <div class="size">
       <p class="p_small_black">Select size</p>
       <SelectSize state="primary" number="47"/>
+      <SelectSize state="primary" number="49"/>
+      <SelectSize state="primary" number="51"/>
+      <SelectSize state="primary" number="53"/>
+      <SelectSize state="primary" number="55"/>
+      <SelectSize state="primary" number="57"/>
+      <SelectSize state="primary" number="59"/>
+      <SelectSize state="primary" number="61"/>
     </div>
     <div>
       <CTA text="Shop now" state="primary" />
     </div>
-    </div>
   </section>
+  <section class="info_con">
+    <p class="align_c">Onda ring 925 sterling silver.</p>
+    <p class="align_c">Made in Denmark.</p>
+  </section>
+  <section class="info_text_con">
+    <div class="button_h3_con">
+    <h3>Material</h3>
+    <h3>Size</h3>
+    <h3>Care</h3>
+  </div>
+    <p class="align_c"> Each Cióió piece is individually handcrafted in Eva’s studio. Cióió is a living brand, avoiding mass production. It evolves piece by piece, making each one unique. I offer the flexibility to recreate and customize every piece according to your preferences.</p>
+    <p class="align_c">Necklace with rock crystals, 925 sterling silver lock &
+      brown silk bead cord.</p>
+  </section>
+  <InstaScroll
+  title="OTHERS HAVE BOUGHT"
+  img1="/assets/img/othershavebought/foto1.webp"
+  alt1=""
+  img2="/assets/img/othershavebought/foto2.webp"
+  alt2=""
+  img3="/assets/img/othershavebought/foto3.webp"
+  alt3=""
+  img4="/assets/img/othershavebought/foto4.webp"
+  alt4=""
+  img5="/assets/img/othershavebought/foto5.webp"
+  alt5=""
+  img6="/assets/img/othershavebought/foto6.webp"
+  alt6=""
+  img7="/assets/img/followusoninsta/foto4.webp"
+  alt7=""
+  img8="/assets/img/followusoninsta/foto3.webp"
+  alt8=""
+/>
+</Layout>
 </Layout>
 
 
@@ -40,7 +83,42 @@ import SelectSize from "../components/Select_size.astro";
   }
   .p_small_black {
     color: var(--black-500);
+    text-wrap: nowrap;
+    align-self: center;
   }
 
 
+  .product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: var(--m_margin);
+  }
+
+.size {
+  display: flex;
+  flex-direction: row;
+  margin-block: auto;
+}
+
+.info_con, .info_text_con {
+    max-width: 700px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    margin-block: var(--margin);
+    justify-content: center;
+    align-items: center;
+    }
+
+    .align_c {
+        text-align: center;
+
+    }
+
+    .button_h3_con {
+      display: flex;
+      align-items: space-between;
+    }
 </style>
