@@ -2,6 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import CTA from "../components/CTA.astro";
 import Slider from "../components/Product_page_slider.astro";
+import Size from "../components/Select_size.astro";
+import SelectSize from "../components/Select_size.astro";
+
+
 ---
 
 <Layout>
@@ -10,4 +14,33 @@ import Slider from "../components/Product_page_slider.astro";
     img2="/assets/img/productphotos/ondaring2.webp"
     img3="/assets/img/productphotos/ondaring3.webp"
   />
+  <section>
+    <div class="productDesc">
+      <h3>Onda ring</h3>
+      <p>1500DKK</p>
+      <div class="seeMore">
+      <p class="p_small">See more about this product</p>
+      <img src="/assets/arrow.svg" alt="arrow button for more information">
+    </div>
+    <div class="size">
+      <p class="p_small_black">Select size</p>
+      <SelectSize state="primary" number="47"/>
+    </div>
+    <div>
+      <CTA text="Shop now" state="primary" />
+    </div>
+    </div>
+  </section>
 </Layout>
+
+
+<style>
+  .p_small, .p_small_black {
+    font-size:var(--w_desc);
+  }
+  .p_small_black {
+    color: var(--black-500);
+  }
+
+
+</style>
