@@ -21,7 +21,7 @@ const {
 ---
 
 <h3>{title}</h3>
-<div class="con" id="drag">
+<div class="con drag">
   <img src={img1} alt={alt1} />
   <img src={img2} alt={alt2} />
   <img src={img3} alt={alt3} />
@@ -54,12 +54,13 @@ const {
 </style>
 
 <script>
-  const container = document.getElementById("drag");
-  let isMouseDown = false;
-  let startX;
-  let scrollLeft;
+  const container = document.querySelector(".drag") as HTMLElement;
 
-  container.addEventListener("mousedown", (e) => {
+  let isMouseDown = false;
+  let startX: number;
+  let scrollLeft: number;
+
+  container.addEventListener("mousedown", (e: MouseEvent) => {
     isMouseDown = true;
     startX = e.pageX - container.offsetLeft;
     scrollLeft = container.scrollLeft;
@@ -73,11 +74,11 @@ const {
     isMouseDown = false;
   });
 
-  container.addEventListener("mousemove", (e) => {
+  container.addEventListener("mousemove", (e: MouseEvent) => {
     if (!isMouseDown) return;
     e.preventDefault();
     const x = e.pageX - container.offsetLeft;
-    const walk = (x - startX) * 1; // Hvor hurtigt den scroller
+    const walk = (x - startX) * 1; //scroll speed
     container.scrollLeft = scrollLeft - walk;
   });
 </script>
