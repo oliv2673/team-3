@@ -21,7 +21,7 @@ const {
 ---
 
 <h3>{title}</h3>
-<div class="con drag">
+<div id="drag">
   <img src={img1} alt={alt1} />
   <img src={img2} alt={alt2} />
   <img src={img3} alt={alt3} />
@@ -33,13 +33,12 @@ const {
 </div>
 
 <style>
-  .con {
+  #drag {
     overflow-x: scroll;
     display: flex;
     gap: 25px;
     padding-block: 25px;
     white-space: nowrap;
-    overflow-x: hidden;
     cursor: grab;
   }
   h3 {
@@ -54,31 +53,37 @@ const {
 </style>
 
 <script>
-  const container = document.querySelector(".drag") as HTMLElement;
+  const dragContainer = document.getElementById("drag");
 
-  let isMouseDown = false;
-  let startX: number;
-  let scrollLeft: number;
+  let isDown = false;
+  let startX;
+  let scrollLeft;
 
-  container.addEventListener("mousedown", (e: MouseEvent) => {
-    isMouseDown = true;
-    startX = e.pageX - container.offsetLeft;
-    scrollLeft = container.scrollLeft;
+  dragContainer.addEventListener("mousedown", (e) => {
+    isDown = true;
+    dragContainer.classList.add("active");
+    startX = e.pageX - dragContainer.offsetLeft;
+    scrollLeft = dragContainer.scrollLeft;
+    dragContainer.style.cursor = "grabbing";
   });
 
-  container.addEventListener("mouseleave", () => {
-    isMouseDown = false;
+  dragContainer.addEventListener("mouseleave", () => {
+    isDown = false;
+    dragContainer.classList.remove("active");
+    dragContainer.style.cursor = "grab";
   });
 
-  container.addEventListener("mouseup", () => {
-    isMouseDown = false;
+  dragContainer.addEventListener("mouseup", () => {
+    isDown = false;
+    dragContainer.classList.remove("active");
+    dragContainer.style.cursor = "grab";
   });
 
-  container.addEventListener("mousemove", (e: MouseEvent) => {
-    if (!isMouseDown) return;
+  dragContainer.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
     e.preventDefault();
-    const x = e.pageX - container.offsetLeft;
-    const walk = (x - startX) * 1; //scroll speed
-    container.scrollLeft = scrollLeft - walk;
+    const x = e.pageX - dragContainer.offsetLeft;
+    const walk = (x - startX) * 1; //scroll-fast
+    dragContainer.scrollLeft = scrollLeft - walk;
   });
 </script>
