@@ -97,12 +97,14 @@ import InstaScroll from "../components/Insta_scroll.astro";
     padding: 10px;
   }
 
-
+section {
+  margin: 20px;
+}
   .product {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px 20px 0px 20px;
+    
   }
 
 .size {
@@ -116,7 +118,6 @@ import InstaScroll from "../components/Insta_scroll.astro";
 
 .info_con, .info_text_con {
     max-width: 700px;
-    margin-inline: auto;
     display: flex;
     flex-direction: column;
     gap: var(--gap);
@@ -171,14 +172,15 @@ import InstaScroll from "../components/Insta_scroll.astro";
         gap: 10px;
       }
       .p_small_black {
-        padding: 10px 10px 10px 0;
+        padding: 8px 8px 8px 0;
       }
-
+/*
       .size {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+*/
 
 .p_small {
   font-size: var(--m_product_text);
@@ -191,7 +193,7 @@ import InstaScroll from "../components/Insta_scroll.astro";
 
 <script>
   //clicked function on info card
-  
+
   window.addEventListener("load", sidenVises);
 
   function sidenVises() {
