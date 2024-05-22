@@ -26,17 +26,18 @@
   --m_text: 15px;
   --m_h2: 20px;
   --m_h1: 70px;
-  --m_h3: 45px
+  --m_h3: 45px;
 
   --w_checkout: 16px;
   --w_desc: 17px;
   --w_button: 20px;
-  --w_h2: 20px;
+
   --w_footer: 20px;
   --w_price: 20px;
   --w_text: 25px;
   --w_h1: 90px;
-  --w_h3_overskrift: 70px;
+  --w_h2: 20px;
+  --w_h3: 70px;
 
   /*Font weights*/
   --light: 300;
@@ -76,11 +77,12 @@ h1 {
 
 h2 {
   font-size: var(--w_h2);
+  text-transform: uppercase;
 }
 
 h3 {
-  font-size: var(--w_text);
-  text-transform: uppercase;
+  font-size: var(--w_h3);
+  font-weight: var(--bold);
 }
 
 p {
@@ -100,7 +102,9 @@ a {
   h2 {
     font-size: var(--m_h2);
   }
-  h3,
+  h3 {
+    font-size: var(--m_h3);
+  }
   p {
     font-size: var(--m_text);
   }

@@ -28,7 +28,7 @@ import Center_text_con from "../components/Center_text_con.astro";
   </section>
   <section class="text_con">
     <img class="butterfly" src="/assets/img/about/butterfly.webp" alt="" />
-    <h2>Cióió [sió - ió]</h2>
+    <h3>Cióió [sió - ió]</h3>
     <Center_text_con state="hide"
       text="The name Cióió, is derived from the Kayapó language, a Northern Jê language (Jê, Macro-Jê) spoken by the Kayapó and the Xikrin people in the north of Mato Grosso and Pará in Brazil."
     />
@@ -36,9 +36,9 @@ import Center_text_con from "../components/Center_text_con.astro";
       text="Cióió means 'butterfly,' symbolizing the profound journey of change and metamorphosis. Just as the butterfly undergoes a remarkable transformation, our brand embraces the essence of evolution and growth."
     />
   </section>
-  <section class="proces">
-    <h3>Process - olho necklace</h3>
-    <div class="grid_proces">
+  <section class="process">
+    <h2>Process - olho necklace</h2>
+    <div class="grid_process">
       <img
         src="/assets/img/about/foto4.webp"
         alt="wax shape of Olho necklace"
@@ -87,7 +87,6 @@ import Center_text_con from "../components/Center_text_con.astro";
 
   h2 {
     text-align: center;
-    font-size: var(--w_h3_overskrift);
     padding-top: var(--gap);
   }
 
@@ -95,12 +94,12 @@ import Center_text_con from "../components/Center_text_con.astro";
     text-align: center;
   }
 
-  .proces {
+  .process {
     display: grid;
     gap: var(--gap);
   }
 
-  .grid_proces {
+  .grid_process {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -112,7 +111,7 @@ import Center_text_con from "../components/Center_text_con.astro";
   }
 
   @media (max-width: 800px) {
-    .grid_proces {
+    .grid_process {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
     }
