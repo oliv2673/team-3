@@ -24,7 +24,7 @@ a {
     outline: var(--w_stroke) solid var(--black-500);
 }
 
-.primary:active {
+.active_click {
     background-color: var(--black-500);
     color: var(--white);
     outline: var(--w_stroke) solid var(--black-500);
@@ -34,11 +34,16 @@ a {
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', (event) => {
-    const link = document.getElementById('myLink');
-    link.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default action (navigation)
-        link.classList.add('primary', 'active');
-    });
-});
+window.addEventListener("load", sidenVises);
+
+function sidenVises() {
+  console.log("Siden vises");
+
+  document.querySelector("#myLink").addEventListener("click", clickSize);
+}
+function clickSize() {
+  console.log("Button clicked");
+
+  document.querySelector("#myLink").classList.add("active_click");
+}
 </script>

@@ -47,9 +47,9 @@ import InstaScroll from "../components/Insta_scroll.astro";
   </section>
   <section class="info_text_con">
     <div class="button_h3_con">
-    <h3>Material</h3>
-    <h3>Size</h3>
-    <h3>Care</h3>
+    <h3 id="material">Material</h3>
+    <h3 id="size">Size</h3>
+    <h3 id="care">Care</h3>
   </div>
     <p class="align_c"> Each Cióió piece is individually handcrafted in Eva’s studio. Cióió is a living brand, avoiding mass production. It evolves piece by piece, making each one unique. I offer the flexibility to recreate and customize every piece according to your preferences.</p>
     <p class="align_c">Necklace with rock crystals, 925 sterling silver lock &
@@ -101,7 +101,6 @@ import InstaScroll from "../components/Insta_scroll.astro";
 }
 
 .size_numbers {
-  background-color: brown;
   display: flex;
 }
 
@@ -141,7 +140,6 @@ import InstaScroll from "../components/Insta_scroll.astro";
     @media (max-width: 800px) {
 
       .product {
-        background-color: aqua;
         display: flex;
         flex-direction: column;
         gap: 10px;
