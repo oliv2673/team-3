@@ -51,9 +51,19 @@ import InstaScroll from "../components/Insta_scroll.astro";
     <h3 id="size">Size</h3>
     <h3 id="care">Care</h3>
   </div>
-    <p class="align_c"> Each Cióió piece is individually handcrafted in Eva’s studio. Cióió is a living brand, avoiding mass production. It evolves piece by piece, making each one unique. I offer the flexibility to recreate and customize every piece according to your preferences.</p>
-    <p class="align_c">Necklace with rock crystals, 925 sterling silver lock &
+  <div id="material_text_con" class="align_c">
+    <p> Each Cióió piece is individually handcrafted in Eva’s studio. Cióió is a living brand, avoiding mass production. It evolves piece by piece, making each one unique. I offer the flexibility to recreate and customize every piece according to your preferences.</p>
+    <p>Necklace with rock crystals, 925 sterling silver lock &
       brown silk bead cord.</p>
+    </div>
+  <div id="size_text_con" class="align_c">
+    <p>Ensure a perfect fit for your ring by accurately measuring your finger circumference.</p>
+     <CTA text="Find your size" state="primary"/>
+  </div>
+ <div id="care_text_con" class="align_c">
+    <p>To prevent your sterling silver from tarnishing, keep it away from harsh chemicals, keep it dry, store it correctly, and clean and use special silver cloth to polish when needed.</p>
+    <p> Take it off when washing your hands or swimming, and keep it in a secure bag or box when you're not wearing it. You also want to take it off when exercising.</p>
+    </div>
   </section>
   <InstaScroll
   title="OTHERS HAVE BOUGHT"
@@ -116,8 +126,10 @@ import InstaScroll from "../components/Insta_scroll.astro";
     }
 
     .align_c {
-        text-align: center;
-
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: var(--gap);
     }
 
     .button_h3_con {
@@ -135,6 +147,20 @@ import InstaScroll from "../components/Insta_scroll.astro";
       transition: opacity 1s ease-out;
       width: 20px;
       cursor: pointer;
+    }
+
+    #material:hover, #size:hover, #care:hover {
+      text-decoration: underline;
+      cursor: pointer;
+
+    }
+
+    .underline {
+    text-decoration: underline;
+  }
+
+    .hide {
+      display: none;
     }
 
     @media (max-width: 800px) {
@@ -162,3 +188,72 @@ import InstaScroll from "../components/Insta_scroll.astro";
 
 
 </style>
+
+<script>
+  //clicked function on info card
+  
+  window.addEventListener("load", sidenVises);
+
+  function sidenVises() {
+    console.log("Siden vises");
+
+    // Initially hide the size and care containers
+    document.querySelector("#size_text_con").classList.add("hide");
+    document.querySelector("#care_text_con").classList.add("hide");
+
+    // Initially underline the material link
+    document.querySelector("#material").classList.add("underline");
+
+    // Clicked function for material
+    document.querySelector("#material").addEventListener("click", clickMaterial);
+
+    // Clicked function for size
+    document.querySelector("#size").addEventListener("click", clickSize);
+
+    // Clicked function for care
+    document.querySelector("#care").addEventListener("click", clickCare);
+  }
+
+  function clickMaterial() {
+    console.log("Material info clicked");
+
+    document.querySelector("#material_text_con").classList.remove("hide");
+    document.querySelector("#size_text_con").classList.add("hide");
+    document.querySelector("#care_text_con").classList.add("hide");
+
+    // Update underline class
+    updateUnderline("#material");
+  }
+
+  function clickSize() {
+    console.log("Size info clicked");
+
+    document.querySelector("#material_text_con").classList.add("hide");
+    document.querySelector("#size_text_con").classList.remove("hide");
+    document.querySelector("#care_text_con").classList.add("hide");
+
+    // Update underline class
+    updateUnderline("#size");
+  }
+
+  function clickCare() {
+    console.log("Care info clicked");
+
+    document.querySelector("#material_text_con").classList.add("hide");
+    document.querySelector("#size_text_con").classList.add("hide");
+    document.querySelector("#care_text_con").classList.remove("hide");
+
+    // Update underline class
+    updateUnderline("#care");
+  }
+
+  function updateUnderline(activeId) {
+    // Remove underline from all
+    document.querySelector("#material").classList.remove("underline");
+    document.querySelector("#size").classList.remove("underline");
+    document.querySelector("#care").classList.remove("underline");
+
+    // Add underline to the active element
+    document.querySelector(activeId).classList.add("underline");
+  }
+</script>
