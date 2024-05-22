@@ -21,11 +21,12 @@ import InstaScroll from "../components/Insta_scroll.astro";
       <p>1500 DKK</p>
       <div class="seeMore">
       <p class="p_small">See more about this product</p>
-      <img src="/assets/arrow.svg" alt="arrow button for more information">
+      <img class="arrow" src="/assets/arrow.svg" alt="arrow button for more information">
     </div>
     </div>
     <div class="size">
       <p class="p_small_black">Select size</p>
+      <div class="size_numbers">
       <SelectSize state="primary" number="47"/>
       <SelectSize state="primary" number="49"/>
       <SelectSize state="primary" number="51"/>
@@ -35,8 +36,9 @@ import InstaScroll from "../components/Insta_scroll.astro";
       <SelectSize state="primary" number="59"/>
       <SelectSize state="primary" number="61"/>
     </div>
+    </div>
     <div class="cta_con">
-      <CTA text="Shop now" state="primary" />
+      <CTA text="Add to cart" state="primary" />
     </div>
   </section>
   <section class="info_con">
@@ -95,9 +97,14 @@ import InstaScroll from "../components/Insta_scroll.astro";
 
 .size {
   display: flex;
-  flex-direction: row;
   margin-bottom: auto;
 }
+
+.size_numbers {
+  background-color: brown;
+  display: flex;
+}
+
 .info_con, .info_text_con {
     max-width: 700px;
     margin-inline: auto;
@@ -120,14 +127,38 @@ import InstaScroll from "../components/Insta_scroll.astro";
       gap: 10vw;
     }
 
+    .seeMore {
+      display: flex;
+    }
+
+    .arrow {
+      color: var(--black-500);
+      transition: opacity 1s ease-out;
+      width: 20px;
+      cursor: pointer;
+    }
+
     @media (max-width: 800px) {
 
       .product {
         background-color: aqua;
         display: flex;
         flex-direction: column;
+        gap: 10px;
+      }
+      .p_small_black {
+        padding: 10px 10px 10px 0;
       }
 
+      .size {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.p_small {
+  font-size: var(--m_product_text);
+}
     
   }
 

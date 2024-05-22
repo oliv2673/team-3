@@ -2,7 +2,7 @@
 const {number, link, state } = Astro.props;
 ---
 
-<a class={state} href={link}>{number}</a>
+<a id="myLink" class={state} href={link}>{number}</a>
 
 <style>
 
@@ -11,6 +11,7 @@ a {
     font-size:var(--w_desc);    
     text-transform: uppercase;
     cursor: pointer;
+    display: block;
     
 
 }
@@ -31,3 +32,13 @@ a {
 
 
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const link = document.getElementById('myLink');
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default action (navigation)
+        link.classList.add('primary', 'active');
+    });
+});
+</script>
