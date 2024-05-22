@@ -1,9 +1,9 @@
 ---
-const {headline, text, } = Astro.props;
+const {headline, text, state } = Astro.props;
 ---
 
 <section>
-    <h3>{headline}</h3>
+    <h3 class={state}  >{headline}</h3>
     <p>{text}</p>
 </section>
 
@@ -22,6 +22,10 @@ const {headline, text, } = Astro.props;
     p {
         text-align: center;
 
+    }
+
+    .hide {
+        display: none;
     }
 
     @media (max-width: 700px) {
