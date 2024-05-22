@@ -1,16 +1,27 @@
----
+<nav>
+  <div class="burger-menu">
+    <a href="/" class="burger-logo">
+      <img src="/assets/Logo_White.svg" alt="Cióió logo" />
+    </a>
+    <div class="burger-con">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <ul class="menu">
+    <li>
+      <a href="/shop" class="underline">SHOP</a>
+      <a href="/about" class="underline">ABOUT US</a>
+      <a href="/" class="logo">
+        <img src="/assets/Logo_White.svg" alt="Cióió logo" />
+      </a>
+      <a href="#" class="underline">SEARCH</a>
+      <a href="#" class="underline">CART (0)</a>
+    </li>
+  </ul>
+</nav>
 
----
-
-<ul>
-  <li>
-    <a href="/shop" class="underline">SHOP</a>
-    <a href="/about" class="underline">ABOUT US</a>
-    <a href="/"><img src="/assets/Logo_White.svg" alt="Cióió logo" /></a>
-    <a href="#" class="underline">SEARCH</a>
-    <a href="#" class="underline">CART (0)</a>
-  </li>
-</ul>
 <style>
   a {
     text-decoration: none;
@@ -23,7 +34,6 @@
     line-height: normal;
     text-transform: uppercase;
     cursor: pointer;
-
     position: relative;
     display: inline-block;
   }
@@ -43,27 +53,148 @@
   .underline:hover::after {
     width: 100%;
   }
+
   li {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding-block: 1rem;
-    position: fixed;
-    z-index: 9999999;
     mix-blend-mode: difference;
-    /* gap: 20px; */
   }
 
   ul {
-    padding: 0rem;
-  }
-
-  rect {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
     mix-blend-mode: difference;
   }
 
-  /*   a:hover {
-    text-decoration: underline;
-  } */
+  /* Burger menu styles */
+  .burger-menu {
+    display: none;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 10000000;
+    mix-blend-mode: difference;
+  }
+
+  .burger-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 35px;
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    z-index: 10000001;
+    mix-blend-mode: difference;
+  }
+
+  .burger-con span {
+    background: var(--white);
+    height: 3px;
+    width: 25px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+  }
+
+  .burger-con span:nth-child(1) {
+    top: 0;
+  }
+
+  .burger-con span:nth-child(2) {
+    top: 10px;
+  }
+
+  .burger-con span:nth-child(3) {
+    top: 20px;
+  }
+
+  .burger-menu.active .burger-con span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+
+  .burger-menu.active .burger-con span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.active .burger-con span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+
+  .burger-logo {
+    display: none;
+    position: fixed;
+    left: 20px;
+    top: 10px;
+    z-index: 10000001;
+  }
+
+  .burger-logo img {
+    width: 80%;
+  }
+
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      height: auto;
+      transition: 0.3s ease;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .menu.active {
+      display: flex;
+      background-color: var(--black-500);
+    }
+
+    .burger-menu {
+      display: flex;
+      justify-content: space-between;
+      mix-blend-mode: normal;
+    }
+
+    .burger-logo {
+      display: block;
+    }
+
+    li {
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: start;
+      width: 100%;
+      margin-left: 20px;
+      margin-top: 50px;
+      gap: 20px;
+      position: relative;
+    }
+    ul {
+      mix-blend-mode: normal;
+    }
+  }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burgerMenu = document.querySelector(".burger-menu");
+    const menu = document.querySelector(".menu");
+
+    burgerMenu.addEventListener("click", function () {
+      menu.classList.toggle("active");
+      burgerMenu.classList.toggle("active");
+    });
+  });
+</script>
