@@ -11,11 +11,13 @@ const { text, link, state } = Astro.props;
     font-weight: var(--bold);
     text-transform: uppercase;
     cursor: pointer;
+    text-wrap: nowrap;
   }
   .primary {
     color: var(--black-500);
     border: var(--w_stroke) solid var(--black-500);
     padding: 10px 40px 10px 40px;
+    display: block;
     transition: 300ms ease;
   }
 
