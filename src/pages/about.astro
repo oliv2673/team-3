@@ -17,11 +17,11 @@ import Center_text_con from "../components/Center_text_con.astro";
   />
 
   <section class="con_eva_portrait">
-    <img
+    <img class="eva"
       src="/assets/img/about/foto1.webp"
       alt="a portrait of Eva Thostrup Semblano sitting on stairs, wearing her own creations"
     />
-    <img
+    <img class="eva"
       src="/assets/img/about/foto2.webp"
       alt="a portrait of Eva Thostrup Semblano standing"
     />
@@ -39,18 +39,18 @@ import Center_text_con from "../components/Center_text_con.astro";
   <section class="process">
     <h2>Process - olho necklace</h2>
     <div class="grid_process">
-      <img
+      <img class="img_width"
         src="/assets/img/about/foto4.webp"
         alt="wax shape of Olho necklace"
       />
-      <img
+      <img class="img_width"
         src="/assets/img/about/foto3.webp"
         alt="silver cast of Olho necklace"
       />
-      <img src="/assets/img/about/foto5.webp" alt="white pearls" />
-      <img src="/assets/img/about/foto6.webp" alt="hands holding the pearls" />
-      <img src="/assets/img/about/foto7.webp" alt="Olho necklace assemled" />
-      <img
+      <img class="img_width" src="/assets/img/about/foto5.webp" alt="white pearls" />
+      <img class="img_width" src="/assets/img/about/foto6.webp" alt="hands holding the pearls" />
+      <img class="img_width" src="/assets/img/about/foto7.webp" alt="Olho necklace assemled" />
+      <img class="img_width"
         src="/assets/img/about/foto8.webp"
         alt="showcasing Olho necklace's opening mekanism"
       />
@@ -68,7 +68,7 @@ import Center_text_con from "../components/Center_text_con.astro";
     max-width: 1000px;
   }
 
-  img {
+  .eva {
     height: 100%;
     display: block;
     width: 100%;
@@ -83,6 +83,7 @@ import Center_text_con from "../components/Center_text_con.astro";
   .butterfly {
     max-width: 40%;
     margin: auto;
+    display: block;
   }
 
   h2 {
@@ -110,13 +111,24 @@ import Center_text_con from "../components/Center_text_con.astro";
     margin: 0;
   }
 
+  .img_width {
+  width: 100%;
+  height: auto;
+  display: block;
+
+    }
+   
+
   @media (max-width: 800px) {
     .grid_process {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
-    }
+      margin-inline: var(--m_margin);
+    } 
     section {
       margin-block: var(--m_margin);
+      
     }
   }
+
 </style>
