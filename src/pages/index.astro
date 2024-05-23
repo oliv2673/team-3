@@ -9,107 +9,129 @@ import ProductCard from "../components/Product_card.astro";
 import ProductsSlider from "../components/Products_slider.astro";
 ---
 
-<Layout>
-  <Hero
-    jumplink="#scrolldown"
-    video="/assets/videos/headervid.mp4"
-    logo="/assets/logo_white_outline.svg"
-    showlogo="showlogo"
-    showcta="showcta"
-  />
-  <section id="scrolldown">
-    <Center_text_con
-      headline="One of a kind"
-      text="Every Cióió piece is born from the hands in goldsmith Eva Thostrup Semblano’s atelier, crafted with care and attention to detail, every piece is truly one-of-a-kind."
+<Layout title="Cióió">
+  <div class="overflow">
+    <Hero
+      jumplink="#scrolldown"
+      video="/assets/videos/headervid.mp4"
+      logo="/assets/logo_white_outline.svg"
+      showlogo="showlogo"
+      showcta="showcta"
     />
-  </section>
-  <section class="big_img_con">
-    <img
-      class="img_style"
-      src="/assets/img/forside/forside1.webp"
-      alt="handmodel wearing Anél and Onda silver jewlery ring"
-    />
-    <div class="button_position">
-      <CTA text="Shop now" state="variant" link="/shop" />
-    </div>
-    <div class="position_con_ring">
-      <img class="img_style" src="/assets/img/forside/frit-anel.webp" alt="" />
-    </div>
-  </section>
-  <section class="asym_con">
-    <Img_asym_con
-      img1="/assets/img/forside/acro-necklace.webp"
-      alt1="Onda Necklace, silver jewelry"
-      img2="/assets/img/forside/anciti-charm.webp"
-      alt2=""
-      type="type1"
-    />
-    <div class="position_con_star">
-      <img class="img_style" src="/assets/img/forside/frit-star.webp" alt="" />
-    </div>
-    <div class="position_con_heart">
-      <img class="img_style" src="/assets/img/forside/frit-heart.webp" alt="" />
-    </div>
-  </section>
-  <Center_text_con
-    headline="Crafted with Integrity"
-    text="Authenticity lies at the heart of everything we do. We exclusively use ethically sourced materials, ensuring that each piece not only looks beautiful but also feels good to wear."
-  />
-  <section class="big_img_con">
-    <img
-      class="img_style"
-      src="/assets/img/forside/forside4.webp"
-      alt="model wearing Onda ring and boots"
-    />
-    <div class="position_con_shell">
-      <img class="img_style" src="/assets/img/forside/frit-shell.webp" alt="" />
-    </div>
-  </section>
-  <ProductsSlider />
-  <section class="makeit">
-    <Center_text_con
-      headline="Make it your own"
-      text="At Cióió, we believe in personalization. Our flexible customization options allow you to reimagine and tailor each piece to reflect your unique style and preferences."
-    />
-  </section>
-  <section class="asym_con">
-    <Img_asym_con
-      img1="/assets/img/forside/back-olho.webp"
-      alt1="Onda Necklace, silver jewelry"
-      img2="/assets/img/forside/olho-hand.webp"
-      alt2=""
-      type="type2"
-    />
-    <div class="position_con_necklace">
-      <img class="img_style" src="/assets/img/forside/frit-olho.webp" alt="" />
-    </div>
-    <div class="position_con_bracelet">
+    <section id="scrolldown">
+      <Center_text_con
+        headline="One of a kind"
+        text="Every Cióió piece is born from the hands in goldsmith Eva Thostrup Semblano’s atelier, crafted with care and attention to detail, every piece is truly one-of-a-kind."
+      />
+    </section>
+    <section class="big_img_con">
       <img
         class="img_style"
-        src="/assets/img/forside/frit-bracelet.webp"
-        alt=""
+        src="/assets/img/forside/forside1.webp"
+        alt="handmodel wearing Anél and Onda silver jewlery ring"
       />
-    </div>
-  </section>
-  <InstaScroll
-    title="OTHERS HAVE BOUGHT"
-    img1="/assets/img/othershavebought/foto1.webp"
-    alt1=""
-    img2="/assets/img/othershavebought/foto2.webp"
-    alt2=""
-    img3="/assets/img/othershavebought/foto3.webp"
-    alt3=""
-    img4="/assets/img/othershavebought/foto4.webp"
-    alt4=""
-    img5="/assets/img/othershavebought/foto5.webp"
-    alt5=""
-    img6="/assets/img/othershavebought/foto6.webp"
-    alt6=""
-    img7="/assets/img/followusoninsta/foto4.webp"
-    alt7=""
-    img8="/assets/img/followusoninsta/foto3.webp"
-    alt8=""
-  />
+      <div class="button_position">
+        <CTA text="Shop now" state="variant" link="/shop" />
+      </div>
+      <div class="position_con_ring">
+        <img
+          class="img_style"
+          src="/assets/img/forside/frit-anel.webp"
+          alt=""
+        />
+      </div>
+    </section>
+    <section class="asym_con">
+      <Img_asym_con
+        img1="/assets/img/forside/acro-necklace.webp"
+        alt1="Onda Necklace, silver jewelry"
+        img2="/assets/img/forside/anciti-charm.webp"
+        alt2=""
+        type="type1"
+      />
+      <div class="position_con_star">
+        <img
+          class="img_style"
+          src="/assets/img/forside/frit-star.webp"
+          alt=""
+        />
+      </div>
+      <div class="position_con_heart">
+        <img
+          class="img_style"
+          src="/assets/img/forside/frit-heart.webp"
+          alt=""
+        />
+      </div>
+    </section>
+    <Center_text_con
+      headline="Crafted with Integrity"
+      text="Authenticity lies at the heart of everything we do. We exclusively use ethically sourced materials, ensuring that each piece not only looks beautiful but also feels good to wear."
+    />
+    <section class="big_img_con">
+      <img
+        class="img_style"
+        src="/assets/img/forside/forside4.webp"
+        alt="model wearing Onda ring and boots"
+      />
+      <div class="position_con_shell">
+        <img
+          class="img_style"
+          src="/assets/img/forside/frit-shell.webp"
+          alt=""
+        />
+      </div>
+    </section>
+    <ProductsSlider />
+    <section class="makeit">
+      <Center_text_con
+        headline="Make it your own"
+        text="At Cióió, we believe in personalization. Our flexible customization options allow you to reimagine and tailor each piece to reflect your unique style and preferences."
+      />
+    </section>
+    <section class="asym_con">
+      <Img_asym_con
+        img1="/assets/img/forside/back-olho.webp"
+        alt1="Onda Necklace, silver jewelry"
+        img2="/assets/img/forside/olho-hand.webp"
+        alt2=""
+        type="type2"
+      />
+      <div class="position_con_necklace">
+        <img
+          class="img_style"
+          src="/assets/img/forside/frit-olho.webp"
+          alt=""
+        />
+      </div>
+      <div class="position_con_bracelet">
+        <img
+          class="img_style"
+          src="/assets/img/forside/frit-bracelet.webp"
+          alt=""
+        />
+      </div>
+    </section>
+    <InstaScroll
+      title="OTHERS HAVE BOUGHT"
+      img1="/assets/img/othershavebought/foto1.webp"
+      alt1=""
+      img2="/assets/img/othershavebought/foto2.webp"
+      alt2=""
+      img3="/assets/img/othershavebought/foto3.webp"
+      alt3=""
+      img4="/assets/img/othershavebought/foto4.webp"
+      alt4=""
+      img5="/assets/img/othershavebought/foto5.webp"
+      alt5=""
+      img6="/assets/img/othershavebought/foto6.webp"
+      alt6=""
+      img7="/assets/img/followusoninsta/foto4.webp"
+      alt7=""
+      img8="/assets/img/followusoninsta/foto3.webp"
+      alt8=""
+    />
+  </div>
 </Layout>
 
 <style>
@@ -195,6 +217,10 @@ import ProductsSlider from "../components/Products_slider.astro";
   @media (max-width: 1050px) {
     .position_con_necklace {
       left: 3vw;
+    }
+
+    .overflow {
+      overflow-x: hidden;
     }
   }
 </style>

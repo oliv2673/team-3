@@ -5,23 +5,26 @@ import Hero from "../components/Hero.astro";
 import Center_text_con from "../components/Center_text_con.astro";
 ---
 
-<Layout>
+<Layout title="About">
   <Hero
     img="/assets/img/about/headerfoto.webp"
     title="about us"
     jumplink="#scrolldown"
   />
   <section id="scrolldown"></section>
-  <Center_text_con state="hide"
+  <Center_text_con
+    state="hide"
     text="Cióió is run by the Danish/Brazilian goldsmith Eva Thostrup Semblano, who creates handmade jewellery pieces out of reclaimed silver. With soft shapes, stackable designs and big pearls, Cióió hits the perfect balance between childish nostalgia and current edginess."
   />
 
   <section class="con_eva_portrait">
-    <img class="eva"
+    <img
+      class="eva"
       src="/assets/img/about/foto1.webp"
       alt="a portrait of Eva Thostrup Semblano sitting on stairs, wearing her own creations"
     />
-    <img class="eva"
+    <img
+      class="eva"
       src="/assets/img/about/foto2.webp"
       alt="a portrait of Eva Thostrup Semblano standing"
     />
@@ -29,28 +32,45 @@ import Center_text_con from "../components/Center_text_con.astro";
   <section class="text_con">
     <img class="butterfly" src="/assets/img/about/butterfly.webp" alt="" />
     <h3>Cióió [sió - ió]</h3>
-    <Center_text_con state="hide"
+    <Center_text_con
+      state="hide"
       text="The name Cióió, is derived from the Kayapó language, a Northern Jê language (Jê, Macro-Jê) spoken by the Kayapó and the Xikrin people in the north of Mato Grosso and Pará in Brazil."
     />
-    <Center_text_con state="hide"
+    <Center_text_con
+      state="hide"
       text="Cióió means 'butterfly,' symbolizing the profound journey of change and metamorphosis. Just as the butterfly undergoes a remarkable transformation, our brand embraces the essence of evolution and growth."
     />
   </section>
   <section class="process">
     <h2>Process - olho necklace</h2>
     <div class="grid_process">
-      <img class="img_width"
+      <img
+        class="img_width"
         src="/assets/img/about/foto4.webp"
         alt="wax shape of Olho necklace"
       />
-      <img class="img_width"
+      <img
+        class="img_width"
         src="/assets/img/about/foto3.webp"
         alt="silver cast of Olho necklace"
       />
-      <img class="img_width" src="/assets/img/about/foto5.webp" alt="white pearls" />
-      <img class="img_width" src="/assets/img/about/foto6.webp" alt="hands holding the pearls" />
-      <img class="img_width" src="/assets/img/about/foto7.webp" alt="Olho necklace assemled" />
-      <img class="img_width"
+      <img
+        class="img_width"
+        src="/assets/img/about/foto5.webp"
+        alt="white pearls"
+      />
+      <img
+        class="img_width"
+        src="/assets/img/about/foto6.webp"
+        alt="hands holding the pearls"
+      />
+      <img
+        class="img_width"
+        src="/assets/img/about/foto7.webp"
+        alt="Olho necklace assemled"
+      />
+      <img
+        class="img_width"
         src="/assets/img/about/foto8.webp"
         alt="showcasing Olho necklace's opening mekanism"
       />
@@ -112,23 +132,19 @@ import Center_text_con from "../components/Center_text_con.astro";
   }
 
   .img_width {
-  width: 100%;
-  height: auto;
-  display: block;
-
-    }
-   
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
   @media (max-width: 800px) {
     .grid_process {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
       margin-inline: var(--m_margin);
-    } 
+    }
     section {
       margin-block: var(--m_margin);
-      
     }
   }
-
 </style>
