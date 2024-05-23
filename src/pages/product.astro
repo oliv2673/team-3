@@ -47,9 +47,10 @@ import InstaScroll from "../components/Insta_scroll.astro";
   </section>
   <section class="info_text_con">
     <div class="button_h3_con">
+      <h2 id="care">Care</h2>
     <h2 id="material">Material</h2>
     <h2 id="size">Size</h2>
-    <h2 id="care">Care</h2>
+    
   </div>
   <div id="material_text_con" class="align_c">
     <p> Each Cióió piece is individually handcrafted in Eva’s studio. Cióió is a living brand, avoiding mass production. It evolves piece by piece, making each one unique. I offer the flexibility to recreate and customize every piece according to your preferences.</p>
@@ -157,6 +158,9 @@ import InstaScroll from "../components/Insta_scroll.astro";
     #material:hover, #size:hover, #care:hover {
       text-decoration: underline;
       cursor: pointer;
+
+    }
+    #material,  #size, #care {
       transition: 300ms ease;
 
     }
@@ -210,7 +214,7 @@ import InstaScroll from "../components/Insta_scroll.astro";
     document.querySelector("#care_text_con").classList.add("hide");
 
     // Initially underline the material link
-    document.querySelector("#material").classList.add("underline");
+    document.querySelector("#care").classList.add("underline");
 
     // Clicked function for material
     document.querySelector("#material").addEventListener("click", clickMaterial);
