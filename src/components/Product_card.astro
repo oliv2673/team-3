@@ -4,18 +4,8 @@ const { name, price, link, img, alt, hover } = Astro.props;
 
 <div class="con">
   <div class="image">
-    <img
-      src={img}
-      alt={alt}
-      class="img_base"
-      style="height: 100%; width: 100%"
-    />
-    <img
-      src={hover}
-      alt={alt}
-      class="img_hover"
-      style="height: 100%; width: 100%;"
-    />
+    <img src={img} alt={alt} class="img_base" />
+    <img src={hover} alt={alt} class="img_hover" />
   </div>
   <a href="/product">
     <p class="name underline">{name}</p>
@@ -84,7 +74,26 @@ const { name, price, link, img, alt, hover } = Astro.props;
     cursor: pointer;
   }
 
-  @media (max-width: 715px) {
+  .img_base,
+  .img_hover {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  @media (max-width: 1150px) {
+    .image {
+      height: 240px;
+      width: 240px;
+      justify-self: center;
+    }
+    .con {
+      width: 240px;
+    }
+  }
+
+  @media (max-width: 815px) {
     .image {
       height: 180px;
       width: 180px;
