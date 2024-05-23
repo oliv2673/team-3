@@ -9,10 +9,10 @@ import Hero from "../components/Hero.astro";
   <Hero
     img="/assets/img/shop/headerfoto.webp"
     title="Shop"
-    jumplink="#productshowcase"
+    jumplink="#scrolldown"
   />
   <div class="overflow">
-    <section class="productshowcase">
+    <section class="productshowcase" id="scrolldown">
       <div class="con">
         <a href="/product">
           <ProductCard
@@ -74,11 +74,11 @@ import Hero from "../components/Hero.astro";
         </a>
       </div>
     </section>
-    <section class="bigimg">
-      <img
-        src="/assets/img/shop/bigimg.webp"
-        alt="picture of a hand with cioio jewelry on"
-      />
+    <section class="vid">
+      <video autoplay loop muted>
+        <source src="/assets/videos/shopvid.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </section>
     <section class="productshowcase">
       <div class="con">
@@ -169,10 +169,17 @@ import Hero from "../components/Hero.astro";
     justify-self: center;
   }
 
-  .bigimg {
+  .vid {
     display: flex;
     padding: 0;
     justify-content: center;
+    width: 50%;
+    margin-inline: auto;
+  }
+
+  video {
+    max-width: 100%;
+    height: auto;
   }
 
   .imgx2 {
