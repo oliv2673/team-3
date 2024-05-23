@@ -30,7 +30,7 @@ import Center_text_con from "../components/Center_text_con.astro";
     />
   </section>
   <section class="text_con">
-    <img class="butterfly" src="/assets/img/about/butterfly.webp" alt="" />
+    <div class="box"></div>
     <h3>Cióió [sió - ió]</h3>
     <Center_text_con
       state="hide"
@@ -101,8 +101,9 @@ import Center_text_con from "../components/Center_text_con.astro";
   }
 
   .butterfly {
-    max-width: 40%;
-    margin: auto;
+    max-width: 35%;
+    margin-inline: auto;
+    margin-bottom: 20px;
     display: block;
   }
 
@@ -136,6 +137,38 @@ import Center_text_con from "../components/Center_text_con.astro";
     height: auto;
     display: block;
   }
+
+  /* sommerfugl animation */
+
+  .box {
+  width:35%;
+  margin-inline:auto;
+  margin-bottom: 30px;
+  display:flex;
+  perspective:500px;
+}
+.box::before,
+.box::after{
+  content:"";
+  padding-top:56%; 
+  flex:1; 
+  background-image:url("/assets/img/about/butterfly.webp");
+  background-size:200% 100%; 
+  animation:left 1s 6 cubic-bezier(0.42, 0, 0.31, 0.83) alternate;  
+  transform-origin:right;
+}
+.box::after {
+  background-position:right;
+  animation-name:right;
+  transform-origin:left;
+}
+
+@keyframes left{
+  to {transform:rotateY(60deg)}
+}
+@keyframes right{
+  to {transform:rotateY(-60deg)}
+}
 
   @media (max-width: 800px) {
     .grid_process {
