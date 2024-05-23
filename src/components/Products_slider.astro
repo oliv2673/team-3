@@ -109,6 +109,14 @@ import ProductCard from "./Product_card.astro";
       overflow-x: hidden;
       cursor: grab;
     }
+
+    @media (max-width: 700px) {
+      .drag {
+        overflow-x: scroll;
+        padding-left: 10px;
+        gap: 10px;
+      }
+    }
   </style>
 
   <script>

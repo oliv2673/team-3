@@ -4,12 +4,9 @@ import CTA from "../components/CTA.astro";
 import Slider from "../components/Product_page_slider.astro";
 import SelectSize from "../components/Select_size.astro";
 import InstaScroll from "../components/Insta_scroll.astro";
-
-
-
 ---
 
-<Layout>
+<Layout title="Onda ring">
   <Slider
     img1="/assets/img/productphotos/ondaring1.webp"
     img2="/assets/img/productphotos/ondaring2.webp"
@@ -20,22 +17,26 @@ import InstaScroll from "../components/Insta_scroll.astro";
       <h2>Onda ring</h2>
       <p>1500 DKK</p>
       <div class="seeMore">
-      <p class="p_small">See more about this product</p>
-      <img class="arrow" src="/assets/arrow.svg" alt="arrow button for more information">
-    </div>
+        <p class="p_small">See more about this product</p>
+        <img
+          class="arrow"
+          src="/assets/arrow.svg"
+          alt="arrow button for more information"
+        />
+      </div>
     </div>
     <div class="size">
       <p class="p_small_black">Select size</p>
       <div class="size_numbers">
-      <SelectSize state="primary" number="47"/>
-      <SelectSize state="primary" number="49"/>
-      <SelectSize state="primary" number="51"/>
-      <SelectSize state="primary" number="53"/>
-      <SelectSize state="primary" number="55"/>
-      <SelectSize state="primary" number="57"/>
-      <SelectSize state="primary" number="59"/>
-      <SelectSize state="primary" number="61"/>
-    </div>
+        <SelectSize state="primary" number="47" />
+        <SelectSize state="primary" number="49" />
+        <SelectSize state="primary" number="51" />
+        <SelectSize state="primary" number="53" />
+        <SelectSize state="primary" number="55" />
+        <SelectSize state="primary" number="57" />
+        <SelectSize state="primary" number="59" />
+        <SelectSize state="primary" number="61" />
+      </div>
     </div>
     <div class="cta_con">
       <CTA text="Add to cart" state="primary" />
@@ -48,49 +49,66 @@ import InstaScroll from "../components/Insta_scroll.astro";
   <section class="info_text_con">
     <div class="button_h3_con">
       <h2 id="care">Care</h2>
-    <h2 id="material">Material</h2>
-    <h2 id="size">Size</h2>
-    
-  </div>
-  <div id="material_text_con" class="align_c">
-    <p> Each Cióió piece is individually handcrafted in Eva’s studio. Cióió is a living brand, avoiding mass production. It evolves piece by piece, making each one unique. I offer the flexibility to recreate and customize every piece according to your preferences.</p>
-    <p>Necklace with rock crystals, 925 sterling silver lock &
-      brown silk bead cord.</p>
+      <h2 id="material">Material</h2>
+      <h2 id="size">Size</h2>
     </div>
-  <div id="size_text_con" class="align_c">
-    <p>Ensure a perfect fit for your ring by accurately measuring your finger circumference.</p>
-     <CTA text="Find your size" state="primary"/>
-  </div>
- <div id="care_text_con" class="align_c">
-    <p>To prevent your sterling silver from tarnishing, keep it away from harsh chemicals, keep it dry, store it correctly, and clean and use special silver cloth to polish when needed.</p>
-    <p> Take it off when washing your hands or swimming, and keep it in a secure bag or box when you're not wearing it. You also want to take it off when exercising.</p>
+    <div id="material_text_con" class="align_c">
+      <p>
+        Each Cióió piece is individually handcrafted in Eva’s studio. Cióió is a
+        living brand, avoiding mass production. It evolves piece by piece,
+        making each one unique. I offer the flexibility to recreate and
+        customize every piece according to your preferences.
+      </p>
+      <p>
+        Necklace with rock crystals, 925 sterling silver lock & brown silk bead
+        cord.
+      </p>
+    </div>
+    <div id="size_text_con" class="align_c">
+      <p>
+        Ensure a perfect fit for your ring by accurately measuring your finger
+        circumference.
+      </p>
+      <CTA text="Find your size" state="primary" />
+    </div>
+    <div id="care_text_con" class="align_c">
+      <p>
+        To prevent your sterling silver from tarnishing, keep it away from harsh
+        chemicals, keep it dry, store it correctly, and clean and use special
+        silver cloth to polish when needed.
+      </p>
+      <p>
+        Take it off when washing your hands or swimming, and keep it in a secure
+        bag or box when you're not wearing it. You also want to take it off when
+        exercising.
+      </p>
     </div>
   </section>
   <InstaScroll
-  title="OTHERS HAVE BOUGHT"
-  img1="/assets/img/othershavebought/foto1.webp"
-  alt1=""
-  img2="/assets/img/othershavebought/foto2.webp"
-  alt2=""
-  img3="/assets/img/othershavebought/foto3.webp"
-  alt3=""
-  img4="/assets/img/othershavebought/foto4.webp"
-  alt4=""
-  img5="/assets/img/othershavebought/foto5.webp"
-  alt5=""
-  img6="/assets/img/othershavebought/foto6.webp"
-  alt6=""
-  img7="/assets/img/followusoninsta/foto4.webp"
-  alt7=""
-  img8="/assets/img/followusoninsta/foto3.webp"
-  alt8=""
-/>
+    title="OTHERS HAVE BOUGHT"
+    img1="/assets/img/othershavebought/foto1.webp"
+    alt1=""
+    img2="/assets/img/othershavebought/foto2.webp"
+    alt2=""
+    img3="/assets/img/othershavebought/foto3.webp"
+    alt3=""
+    img4="/assets/img/othershavebought/foto4.webp"
+    alt4=""
+    img5="/assets/img/othershavebought/foto5.webp"
+    alt5=""
+    img6="/assets/img/othershavebought/foto6.webp"
+    alt6=""
+    img7="/assets/img/followusoninsta/foto4.webp"
+    alt7=""
+    img8="/assets/img/followusoninsta/foto3.webp"
+    alt8=""
+  />
 </Layout>
 
-
 <style>
-  .p_small, .p_small_black {
-    font-size:var(--w_desc);
+  .p_small,
+  .p_small_black {
+    font-size: var(--w_desc);
   }
   .p_small_black {
     color: var(--black-500);
@@ -102,26 +120,26 @@ import InstaScroll from "../components/Insta_scroll.astro";
     margin-inline: auto;
   }
 
-.product {
-  margin: 20px;
-}
+  .product {
+    margin: 20px;
+  }
   .product {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
   }
 
-.size {
-  display: flex;
-  margin-bottom: auto;
-}
+  .size {
+    display: flex;
+    margin-bottom: auto;
+  }
 
-.size_numbers {
-  display: flex;
-}
+  .size_numbers {
+    display: flex;
+  }
 
-.info_con, .info_text_con {
+  .info_con,
+  .info_text_con {
     max-width: 700px;
     display: flex;
     flex-direction: column;
@@ -129,62 +147,62 @@ import InstaScroll from "../components/Insta_scroll.astro";
     justify-content: center;
     align-items: center;
     margin-block: var(--m_margin);
-    }
+  }
 
-    .align_c {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      gap: var(--gap);
-    }
+  .align_c {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: var(--gap);
+  }
 
-    .button_h3_con {
-      display: flex;
-      flex-direction: row;
-      gap: 10vw;
-    }
+  .button_h3_con {
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+  }
 
-    .seeMore {
-      display: flex;
-    }
+  .seeMore {
+    display: flex;
+  }
 
-    .arrow {
-      color: var(--black-500);
-      transition: opacity 1s ease-out;
-      width: 20px;
-      cursor: pointer;
-    }
+  .arrow {
+    color: var(--black-500);
+    transition: opacity 1s ease-out;
+    width: 20px;
+    cursor: pointer;
+  }
 
-    #material:hover, #size:hover, #care:hover {
-      text-decoration: underline;
-      cursor: pointer;
+  #material:hover,
+  #size:hover,
+  #care:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  #material,
+  #size,
+  #care {
+    transition: 300ms ease;
+  }
 
-    }
-    #material,  #size, #care {
-      transition: 300ms ease;
-
-    }
-
-    .underline {
+  .underline {
     text-decoration: underline;
   }
 
-    .hide {
-      display: none;
-      
+  .hide {
+    display: none;
+  }
+
+  @media (max-width: 800px) {
+    .product {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
-
-    @media (max-width: 800px) {
-
-      .product {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-      .p_small_black {
-        padding: 8px 8px 8px 0;
-      }
-/*
+    .p_small_black {
+      padding: 8px 8px 8px 0;
+    }
+    /*
       .size {
   display: flex;
   flex-direction: column;
@@ -192,13 +210,10 @@ import InstaScroll from "../components/Insta_scroll.astro";
 }
 */
 
-.p_small {
-  font-size: var(--m_product_text);
-}
-    
+    .p_small {
+      font-size: var(--m_product_text);
+    }
   }
-
-
 </style>
 
 <script>
@@ -217,7 +232,9 @@ import InstaScroll from "../components/Insta_scroll.astro";
     document.querySelector("#care").classList.add("underline");
 
     // Clicked function for material
-    document.querySelector("#material").addEventListener("click", clickMaterial);
+    document
+      .querySelector("#material")
+      .addEventListener("click", clickMaterial);
 
     // Clicked function for size
     document.querySelector("#size").addEventListener("click", clickSize);
