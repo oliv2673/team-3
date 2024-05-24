@@ -71,6 +71,7 @@ import ProductsSlider from "../components/Products_slider.astro";
     <section class="big_img_con">
       <img
         class="img_style"
+        id="bigimg"
         src="/assets/img/forside/forside4.webp"
         alt="model wearing Onda ring and boots"
       />
@@ -89,7 +90,7 @@ import ProductsSlider from "../components/Products_slider.astro";
         text="At Cióió, we believe in personalization. Our flexible customization options allow you to reimagine and tailor each piece to reflect your unique style and preferences."
       />
     </section>
-    <section class="asym_con">
+    <section class="asym_con" id="asymcon">
       <Img_asym_con
         img1="/assets/img/forside/back-olho.webp"
         alt1="Onda Necklace, silver jewelry"
@@ -214,6 +215,10 @@ import ProductsSlider from "../components/Products_slider.astro";
     margin-block: 0;
   }
 
+  #bigimg {
+    transform: scaleX(-1);
+  }
+
   @media (max-width: 1050px) {
     .position_con_necklace {
       left: 3vw;
@@ -240,11 +245,91 @@ import ProductsSlider from "../components/Products_slider.astro";
       start: "60% 120%",
       end: "250% 20%",
       scrub: 1,
-      markers: {
+      /*     markers: {
         startColor: "purple",
         endColor: "fuchsia",
         fontSize: "3rem",
-      },
+      }, */
+    },
+  });
+
+  gsap.from(".position_con_star", {
+    y: -150,
+
+    scrollTrigger: {
+      trigger: ".asym_con",
+      start: "30% bottom",
+      end: "80% top",
+      scrub: 2,
+      /* markers: {
+        startColor: "purple",
+        endColor: "fuchsia",
+        fontSize: "3rem",
+      }, */
+    },
+  });
+
+  gsap.to(".position_con_heart", {
+    y: 75,
+
+    scrollTrigger: {
+      trigger: ".asym_con",
+      start: "50% 80%",
+      end: "150% 20%",
+      scrub: 1,
+      /*       markers: {
+        startColor: "purple",
+        endColor: "fuchsia",
+        fontSize: "3rem",
+      }, */
+    },
+  });
+
+  gsap.to(".position_con_shell", {
+    y: 150,
+
+    scrollTrigger: {
+      trigger: "#bigimg",
+      start: "top bottom",
+      end: "bottom 20%",
+      scrub: 1,
+      /*       markers: {
+        startColor: "purple",
+        endColor: "fuchsia",
+        fontSize: "3rem",
+      }, */
+    },
+  });
+
+  gsap.to(".position_con_necklace", {
+    y: 300,
+
+    scrollTrigger: {
+      trigger: "#asymcon",
+      start: "-10% 90%",
+      end: "bottom 40%",
+      scrub: 1,
+      /*      markers: {
+        startColor: "purple",
+        endColor: "fuchsia",
+        fontSize: "3rem",
+      }, */
+    },
+  });
+
+  gsap.to(".position_con_bracelet", {
+    y: 75,
+
+    scrollTrigger: {
+      trigger: "#asymcon",
+      start: "45% 90%",
+      end: "bottom top",
+      scrub: 2,
+      /*  markers: {
+        startColor: "purple",
+        endColor: "fuchsia",
+        fontSize: "3rem",
+      }, */
     },
   });
 </script>
