@@ -165,7 +165,7 @@ import ProductsSlider from "../components/Products_slider.astro";
   .position_con_star {
     height: 28%;
     position: absolute;
-    bottom: 13vw;
+    bottom: 11vw;
     left: 2vw;
     transform: rotate(-80deg);
   }
@@ -193,7 +193,7 @@ import ProductsSlider from "../components/Products_slider.astro";
   .position_con_necklace {
     height: 40%;
     position: absolute;
-    top: -4vw;
+    top: -8vw;
     left: 0;
     transform: rotate(-30deg);
     z-index: 10;
@@ -253,13 +253,13 @@ import ProductsSlider from "../components/Products_slider.astro";
     },
   });
 
-  gsap.from(".position_con_star", {
-    y: -150,
+  gsap.to(".position_con_star", {
+    y: -130,
 
     scrollTrigger: {
       trigger: ".asym_con",
-      start: "30% bottom",
-      end: "80% top",
+      start: "30% 50%",
+      end: "70% top",
       scrub: 2,
       /* markers: {
         startColor: "purple",
@@ -301,7 +301,7 @@ import ProductsSlider from "../components/Products_slider.astro";
     },
   });
 
-  gsap.to(".position_con_necklace", {
+  gsap.from(".position_con_necklace", {
     y: 140,
 
     scrollTrigger: {
