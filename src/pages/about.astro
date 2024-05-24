@@ -140,69 +140,68 @@ import Center_text_con from "../components/Center_text_con.astro";
 
   /* sommerfugl animation */
   .box {
-  width: 35%;
-  margin-inline: auto;
-  margin-bottom: 30px;
-  display: flex;
-  perspective: 500px;
-}
-
-.box::before,
-.box::after {
-  content: "";
-  padding-top: 56%;
-  flex: 1;
-  background-image: url("/assets/img/about/butterfly.webp");
-  background-size: 200% 100%;
-  animation: left 1s 6 cubic-bezier(0.42, 0, 0.31, 0.83) alternate;
-  transform-origin: right;
-}
-
-.box::after {
-  background-position: right;
-  animation-name: right;
-  transform-origin: left;
-}
-
-.box:hover::before,
-.box:hover::after {
-  animation-play-state: paused; /* Pause current animation */
-}
-
-.box:hover::before {
-  animation: leftHover 1s 6 cubic-bezier(0.42, 0, 0.31, 0.83) alternate; /* Hover animation */
-}
-
-.box:hover::after {
-  animation: rightHover 1s 6 cubic-bezier(0.42, 0, 0.31, 0.83) alternate; /* Hover animation */
-}
-
-@keyframes left {
-  to {
-    transform: rotateY(60deg);
+    width: 35%;
+    margin-inline: auto;
+    margin-bottom: 30px;
+    display: flex;
+    perspective: 500px;
   }
-}
 
-@keyframes right {
-  to {
-    transform: rotateY(-60deg);
+  .box::before,
+  .box::after {
+    content: "";
+    padding-top: 56%;
+    flex: 1;
+    background-image: url("/assets/img/about/butterfly.webp");
+    background-size: 200% 100%;
+    animation: left 1s 2 cubic-bezier(0.42, 0, 0.31, 0.83) alternate;
+    transform-origin: right;
   }
-}
 
-@keyframes leftHover {
-  to {
-    transform: rotateY(60deg);
+  .box::after {
+    background-position: right;
+    animation-name: right;
+    transform-origin: left;
   }
-}
 
-@keyframes rightHover {
-  to {
-    transform: rotateY(-60deg);
+  .box:hover::before,
+  .box:hover::after {
+    animation-play-state: paused;
   }
-}
 
+  .box:hover::before {
+    animation: leftHover 1s 2 cubic-bezier(0.42, 0, 0.31, 0.83) alternate;
+  }
 
-/* Media query */
+  .box:hover::after {
+    animation: rightHover 1s 2 cubic-bezier(0.42, 0, 0.31, 0.83) alternate;
+  }
+
+  @keyframes left {
+    to {
+      transform: rotateY(60deg);
+    }
+  }
+
+  @keyframes right {
+    to {
+      transform: rotateY(-60deg);
+    }
+  }
+
+  @keyframes leftHover {
+    to {
+      transform: rotateY(60deg);
+    }
+  }
+
+  @keyframes rightHover {
+    to {
+      transform: rotateY(-60deg);
+    }
+  }
+
+  /* Media query */
 
   @media (max-width: 800px) {
     .grid_process {
