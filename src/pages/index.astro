@@ -114,22 +114,22 @@ import ProductsSlider from "../components/Products_slider.astro";
       </div>
     </section>
     <InstaScroll
-      title="OTHERS HAVE BOUGHT"
-      img1="/assets/img/othershavebought/foto1.webp"
+      title="@Follow us on instagram"
+      img1="/assets/img/followusoninsta/foto1.webp"
       alt1=""
-      img2="/assets/img/othershavebought/foto2.webp"
+      img2="/assets/img/followusoninsta/foto2.webp"
       alt2=""
-      img3="/assets/img/othershavebought/foto3.webp"
+      img3="/assets/img/followusoninsta/foto3.webp"
       alt3=""
-      img4="/assets/img/othershavebought/foto4.webp"
+      img4="/assets/img/followusoninsta/foto4.webp"
       alt4=""
-      img5="/assets/img/othershavebought/foto5.webp"
+      img5="/assets/img/followusoninsta/foto5.webp"
       alt5=""
-      img6="/assets/img/othershavebought/foto6.webp"
+      img6="/assets/img/followusoninsta/foto6.webp"
       alt6=""
-      img7="/assets/img/followusoninsta/foto4.webp"
+      img7="/assets/img/followusoninsta/foto7.webp"
       alt7=""
-      img8="/assets/img/followusoninsta/foto3.webp"
+      img8="/assets/img/followusoninsta/foto8.webp"
       alt8=""
     />
   </div>
@@ -183,6 +183,7 @@ import ProductsSlider from "../components/Products_slider.astro";
     position: absolute;
     bottom: -10vw;
     right: 4vw;
+    z-index: 10;
   }
   .position_con_shell {
     height: 34%;
@@ -238,14 +239,14 @@ import ProductsSlider from "../components/Products_slider.astro";
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.to(".position_con_ring", {
-    y: 300,
+    y: 200,
 
     scrollTrigger: {
       trigger: ".big_img_con",
-      start: "60% 120%",
-      end: "250% 20%",
+      start: "60% 50%",
+      end: "200% 50%",
       scrub: 1,
-      /*     markers: {
+      /* markers: {
         startColor: "purple",
         endColor: "fuchsia",
         fontSize: "3rem",
@@ -286,13 +287,13 @@ import ProductsSlider from "../components/Products_slider.astro";
   });
 
   gsap.to(".position_con_shell", {
-    y: 50,
+    y: 75,
 
     scrollTrigger: {
       trigger: "#bigimg",
       start: "top bottom",
       end: "bottom 20%",
-      scrub: 1,
+      scrub: 2,
       /*       markers: {
         startColor: "purple",
         endColor: "fuchsia",
