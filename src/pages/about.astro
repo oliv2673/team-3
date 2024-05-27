@@ -29,17 +29,20 @@ import Center_text_con from "../components/Center_text_con.astro";
       alt="a portrait of Eva Thostrup Semblano standing"
     />
   </section>
-  <section class="text_con">
+  <section>
     <div class="box"></div>
     <h3>Cióió [sió - ió]</h3>
+
     <Center_text_con
       state="hide"
       text="The name Cióió, is derived from the Kayapó language, a Northern Jê language (Jê, Macro-Jê) spoken by the Kayapó and the Xikrin people in the north of Mato Grosso and Pará in Brazil."
     />
-    <Center_text_con
-      state="hide"
-      text="Cióió means 'butterfly,' symbolizing the profound journey of change and metamorphosis. Just as the butterfly undergoes a remarkable transformation, our brand embraces the essence of evolution and growth."
-    />
+    <div class="text_con">
+      <Center_text_con
+        state="hide"
+        text="Cióió means 'butterfly,' symbolizing the profound journey of change and metamorphosis. Just as the butterfly undergoes a remarkable transformation, our brand embraces the essence of evolution and growth."
+      />
+    </div>
   </section>
   <section class="process">
     <h2>Process - olho necklace</h2>
@@ -138,6 +141,10 @@ import Center_text_con from "../components/Center_text_con.astro";
     display: block;
   }
 
+  .text_con {
+    margin-top: -60px;
+  }
+
   /* sommerfugl animation */
   .box {
     width: 35%;
@@ -211,6 +218,10 @@ import Center_text_con from "../components/Center_text_con.astro";
     }
     section {
       margin-block: var(--m_margin);
+    }
+
+    .text_con {
+      margin-top: -20px;
     }
   }
 </style>
