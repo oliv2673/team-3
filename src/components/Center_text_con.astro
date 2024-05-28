@@ -1,14 +1,14 @@
 ---
-const {headline, text, state } = Astro.props;
+const { headline, text, state } = Astro.props;
 ---
 
 <section>
-    <h2 class={state}  >{headline}</h2>
-    <p>{text}</p>
+  <h2 class={state}>{headline}</h2>
+  <p>{text}</p>
 </section>
 
 <style>
-    section {
+  section {
     max-width: 700px;
     margin-inline: auto;
     display: flex;
@@ -17,24 +17,25 @@ const {headline, text, state } = Astro.props;
     margin-block: var(--margin);
     justify-content: center;
     align-items: center;
+  }
+
+  p {
+    text-align: center;
+    z-index: 100;
+  }
+
+  h2 {
+    z-index: 100;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  @media (max-width: 700px) {
+    section {
+      padding-inline: 10%;
+      margin-block: var(--m_margin);
     }
-
-    p {
-        text-align: center;
-
-    }
-
-    .hide {
-        display: none;
-    }
-
-    @media (max-width: 700px) {
-        section {
-            padding-inline: 10%;
-            margin-block: var(--m_margin);
-        }
-    
-    }
-
-
+  }
 </style>

@@ -9,21 +9,16 @@ import InstaScroll from "../components/Insta_scroll.astro";
 <Layout title="Onda ring">
   <Slider
     img1="/assets/img/productphotos/ondaring1.webp"
+    alt1="onda ring productfoto 1"
     img2="/assets/img/productphotos/ondaring2.webp"
+    alt2="onda ring productfoto 2"
     img3="/assets/img/productphotos/ondaring3.webp"
+    alt3="onda ring productfoto 3"
   />
   <section class="product">
     <div class="productDesc">
       <h2>Onda ring</h2>
       <p>1500 DKK</p>
-      <div class="seeMore">
-        <p class="p_small">See more about this product</p>
-        <img
-          class="arrow"
-          src="/assets/arrow.svg"
-          alt="arrow button for more information"
-        />
-      </div>
     </div>
     <div class="size">
       <p class="p_small_black">Select size</p>
@@ -39,7 +34,7 @@ import InstaScroll from "../components/Insta_scroll.astro";
       </div>
     </div>
     <div class="cta_con">
-      <CTA text="Add to cart" state="primary" />
+      <CTA text="Add to cart" state="primary" link="#" />
     </div>
   </section>
   <section class="info_con">
@@ -69,7 +64,7 @@ import InstaScroll from "../components/Insta_scroll.astro";
         Ensure a perfect fit for your ring by accurately measuring your finger
         circumference.
       </p>
-      <CTA text="Find your size" state="primary" />
+      <CTA text="Find your size" state="primary" link="#" />
     </div>
     <div id="care_text_con" class="align_c">
       <p>
@@ -87,21 +82,21 @@ import InstaScroll from "../components/Insta_scroll.astro";
   <InstaScroll
     title="OTHERS HAVE BOUGHT"
     img1="/assets/img/othershavebought/foto1.webp"
-    alt1=""
+    alt1="Elderly woman sitting in a couch having some of Cióió's jewelry on"
     img2="/assets/img/othershavebought/foto2.webp"
-    alt2=""
+    alt2="A young woman taking a mirror selfie while wearing Cióió's jewelry"
     img3="/assets/img/othershavebought/foto3.webp"
-    alt3=""
+    alt3="A girl walking in the park, showcasing her amor charm on a necklace"
     img4="/assets/img/othershavebought/foto4.webp"
-    alt4=""
+    alt4="A young man taking a mirror selfie in his room, wearing Cióió's jewelry"
     img5="/assets/img/othershavebought/foto5.webp"
-    alt5=""
+    alt5="A womans hands ontop of a menu from a restaurante showing the Onda rings she has bought"
     img6="/assets/img/othershavebought/foto6.webp"
-    alt6=""
+    alt6="Womans hand showing the Anel ring on her thumb finger"
     img7="/assets/img/othershavebought/foto7.webp"
-    alt7=""
+    alt7="A girl in a black dress and a Olho necklace around her neck"
     img8="/assets/img/othershavebought/foto8.webp"
-    alt8=""
+    alt8="A young woman showing off her new jewelry from Cióíó"
   />
 </Layout>
 
@@ -126,16 +121,30 @@ import InstaScroll from "../components/Insta_scroll.astro";
   .product {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+  }
+
+  .p_small_black {
+    padding: 0;
+  }
+
+  .productDesc {
+    width: 207px;
   }
 
   .size {
     display: flex;
-    margin-bottom: auto;
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
   }
 
   .size_numbers {
     display: flex;
+    gap: 2px;
+  }
+
+  .cta_con {
+    margin-block: auto;
   }
 
   .info_con,
@@ -201,6 +210,11 @@ import InstaScroll from "../components/Insta_scroll.astro";
     }
     .p_small_black {
       padding: 8px 8px 8px 0;
+    }
+
+    .cta_con {
+      margin: auto;
+      padding-top: 20px;
     }
     /*
       .size {

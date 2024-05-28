@@ -1,8 +1,8 @@
 <nav>
+  <a href="/" class="burger-logo">
+    <img src="/assets/Logo_White.svg" alt="Cióió logo" />
+  </a>
   <div class="burger-menu">
-    <a href="/" class="burger-logo">
-      <img src="/assets/Logo_White.svg" alt="Cióió logo" />
-    </a>
     <div class="burger-con">
       <span></span>
       <span></span>
@@ -23,6 +23,7 @@
 </nav>
 
 <style>
+  /* General Styles */
   a {
     text-decoration: none;
     color: var(--white);
@@ -81,6 +82,7 @@
     cursor: pointer;
     z-index: 10000000;
     mix-blend-mode: difference;
+    transition: all 0.3s ease-in-out;
   }
 
   .burger-con {
@@ -146,10 +148,12 @@
 
   @media (max-width: 768px) {
     .menu {
-      display: none;
-      flex-direction: column;
-      height: auto;
-      transition: 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition:;
+      /*       max-height 0.3s ease,
+        opacity 0.3s ease 1s; */
     }
 
     .logo {
@@ -157,8 +161,12 @@
     }
 
     .menu.active {
-      display: flex;
+      max-height: 221px;
+      opacity: 1;
       background-color: var(--black-500);
+      transition:
+        max-height 0.5s ease,
+        opacity 0.3s ease;
     }
 
     .burger-menu {
@@ -181,8 +189,27 @@
       gap: 20px;
       position: relative;
     }
+
     ul {
       mix-blend-mode: normal;
+    }
+
+    /* Keyframes for fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Applying the animation with staggered delays */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
     }
   }
 </style>
@@ -191,10 +218,23 @@
   document.addEventListener("DOMContentLoaded", function () {
     const burgerMenu = document.querySelector(".burger-menu");
     const menu = document.querySelector(".menu");
+    const menuItems = menu.querySelectorAll("li a");
 
     burgerMenu.addEventListener("click", function () {
       menu.classList.toggle("active");
       burgerMenu.classList.toggle("active");
+
+      if (menu.classList.contains("active")) {
+        menuItems.forEach((item, index) => {
+          (item as HTMLElement).style.animationDelay = `${index * 0.05}s`;
+          item.classList.add("fade-in");
+        });
+      } else {
+        menuItems.forEach((item) => {
+          item.classList.remove("fade-in");
+          (item as HTMLElement).style.animationDelay = "0";
+        });
+      }
     });
   });
 </script>

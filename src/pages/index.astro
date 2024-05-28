@@ -17,6 +17,7 @@ import ProductsSlider from "../components/Products_slider.astro";
       logo="/assets/logo_white_outline.svg"
       showlogo="showlogo"
       showcta="showcta"
+      alt="video showcase"
     />
     <section id="scrolldown">
       <Center_text_con
@@ -37,7 +38,7 @@ import ProductsSlider from "../components/Products_slider.astro";
         <img
           class="img_style"
           src="/assets/img/forside/frit-anel.webp"
-          alt=""
+          alt="Anél ring"
         />
       </div>
     </section>
@@ -46,21 +47,21 @@ import ProductsSlider from "../components/Products_slider.astro";
         img1="/assets/img/forside/acro-necklace.webp"
         alt1="Onda Necklace, silver jewelry"
         img2="/assets/img/forside/anciti-charm.webp"
-        alt2=""
+        alt2="ANÇITI CHARM necklace, showcased around the neck by holding it out with two hands"
         type="type1"
       />
       <div class="position_con_star">
         <img
           class="img_style"
           src="/assets/img/forside/frit-star.webp"
-          alt=""
+          alt="ANÇITI CHARM"
         />
       </div>
       <div class="position_con_heart">
         <img
           class="img_style"
           src="/assets/img/forside/frit-heart.webp"
-          alt=""
+          alt="Amor charm necklace"
         />
       </div>
     </section>
@@ -79,11 +80,14 @@ import ProductsSlider from "../components/Products_slider.astro";
         <img
           class="img_style"
           src="/assets/img/forside/frit-shell.webp"
-          alt=""
+          alt="one mar charm placed within one of the two shells"
         />
       </div>
     </section>
     <ProductsSlider />
+    <div class="cta">
+      <CTA text="Shop now" state="primary" link="/shop" />
+    </div>
     <section class="makeit">
       <Center_text_con
         headline="Make it your own"
@@ -95,42 +99,42 @@ import ProductsSlider from "../components/Products_slider.astro";
         img1="/assets/img/forside/back-olho.webp"
         alt1="Onda Necklace, silver jewelry"
         img2="/assets/img/forside/olho-hand.webp"
-        alt2=""
+        alt2="Olho Necklace, silver jewelry and asa lock"
         type="type2"
       />
       <div class="position_con_necklace">
         <img
           class="img_style"
           src="/assets/img/forside/frit-olho.webp"
-          alt=""
+          alt="olho necklace flying"
         />
       </div>
       <div class="position_con_bracelet">
         <img
           class="img_style"
           src="/assets/img/forside/frit-bracelet.webp"
-          alt=""
+          alt="asa lock bracelet flying"
         />
       </div>
     </section>
     <InstaScroll
       title="@Follow us on instagram"
       img1="/assets/img/followusoninsta/foto1.webp"
-      alt1=""
+      alt1="An empty cup with coffeeground in the bottom, besides it lies paper with Cióió's logo on it"
       img2="/assets/img/followusoninsta/foto2.webp"
-      alt2=""
+      alt2="An elderly woman wearing some of Cióió's jewelry, while drinking her morning coffe"
       img3="/assets/img/followusoninsta/foto3.webp"
-      alt3=""
+      alt3="Woman showing the onda ring she's wearing while she's on the beach"
       img4="/assets/img/followusoninsta/foto4.webp"
-      alt4=""
+      alt4="A man showcasing his Olho necklace around his neck"
       img5="/assets/img/followusoninsta/foto5.webp"
-      alt5=""
+      alt5="Proccess images of the onda ring"
       img6="/assets/img/followusoninsta/foto6.webp"
-      alt6=""
+      alt6="Eva having her hands over her mouth and nose, showcasing her out fit and some of her rings"
       img7="/assets/img/followusoninsta/foto7.webp"
-      alt7=""
+      alt7="The mar charm in some shells"
       img8="/assets/img/followusoninsta/foto8.webp"
-      alt8=""
+      alt8="Black olho necklace laying on a blue background"
     />
   </div>
 </Layout>
@@ -176,6 +180,7 @@ import ProductsSlider from "../components/Products_slider.astro";
     bottom: -4vw;
     right: -8vw;
     transform: scaleX(-1) rotate(10deg);
+    z-index: 99;
   }
 
   .position_con_ring {
@@ -210,7 +215,7 @@ import ProductsSlider from "../components/Products_slider.astro";
   }
 
   .makeit {
-    margin-top: -120px;
+    margin-top: -70px;
   }
   #scrolldown {
     margin-block: 0;
@@ -220,9 +225,19 @@ import ProductsSlider from "../components/Products_slider.astro";
     transform: scaleX(-1);
   }
 
+  .cta {
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+  }
+
   @media (max-width: 1050px) {
     .position_con_necklace {
       left: 3vw;
+    }
+
+    .makeit {
+      margin-top: 0;
     }
 
     .overflow {

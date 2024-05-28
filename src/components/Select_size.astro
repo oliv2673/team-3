@@ -1,50 +1,44 @@
 ---
-const {number, link, state } = Astro.props;
+const { number, link, state } = Astro.props;
 ---
 
-<a id="myLink" class={state} href={link}>{number}</a>
+<a id="myLink" class={state} href="#">{number}</a>
 
 <style>
-
-a {
+  a {
     font-family: "Karla";
-    font-size:var(--w_desc);    
+    font-size: var(--w_desc);
     text-transform: uppercase;
     cursor: pointer;
     display: block;
-
-}
-.primary {
+  }
+  .primary {
     color: var(--black-500);
     padding: 8px;
-
-}
-.primary:hover {
+  }
+  .primary:hover {
     outline: var(--w_stroke) solid var(--black-500);
-    
-}
+  }
 
-.active_click {
+  .active_click {
     background-color: var(--black-500);
     color: var(--white);
     outline: var(--w_stroke) solid var(--black-500);
-}
-
-
+  }
 </style>
 
 <script>
   //virker ikke !
-window.addEventListener("load", sidenVises);
+  window.addEventListener("load", sidenVises);
 
-function sidenVises() {
-  console.log("Siden vises");
+  function sidenVises() {
+    console.log("Siden vises");
 
-  document.querySelector("#myLink").addEventListener("click", clickSize);
-}
-function clickSize() {
-  console.log("Button clicked");
+    document.querySelector("#myLink").addEventListener("click", clickSize);
+  }
+  function clickSize() {
+    console.log("Button clicked");
 
-  document.querySelector("#myLink").classList.add("active_click");
-}
+    document.querySelector("#myLink").classList.add("active_click");
+  }
 </script>
