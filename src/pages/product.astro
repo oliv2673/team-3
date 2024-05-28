@@ -118,16 +118,30 @@ import InstaScroll from "../components/Insta_scroll.astro";
   .product {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+  }
+
+  .p_small_black {
+    padding: 0;
+  }
+
+  .productDesc {
+    width: 207px;
   }
 
   .size {
     display: flex;
-    margin-bottom: auto;
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
   }
 
   .size_numbers {
     display: flex;
+    gap: 2px;
+  }
+
+  .cta_con {
+    margin-block: auto;
   }
 
   .info_con,
@@ -196,7 +210,8 @@ import InstaScroll from "../components/Insta_scroll.astro";
     }
 
     .cta_con {
-      margin-inline: auto;
+      margin: auto;
+      padding-top: 20px;
     }
     /*
       .size {

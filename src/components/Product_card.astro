@@ -10,7 +10,7 @@ const { name, price, link, img, alt, hover } = Astro.props;
   <a href="/product">
     <p class="name underline">{name}</p>
     <br />
-    <p class="price underline">{price} DKK</p>
+    <p class="price">{price} DKK</p>
   </a>
 </div>
 <style>
@@ -80,6 +80,10 @@ const { name, price, link, img, alt, hover } = Astro.props;
     height: 100%;
     display: block;
     object-fit: cover;
+  }
+
+  .con:hover .underline {
+    text-decoration: underline;
   }
 
   @media (max-width: 1150px) {

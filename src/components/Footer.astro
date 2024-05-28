@@ -32,12 +32,14 @@
     </li>
     <li>
       <p>GET IN TOUCH</p>
-      <a href="">Email</a>
-      <a href="">Instagram</a>
+      <a href="mailto:eva.cioiostudio@gmail.com">Email</a>
+      <a href="https://www.instagram.com/cioiostudio/" target="_blank"
+        >Instagram</a
+      >
     </li>
   </div>
   <div class="logo">
-    <a href="" class="logo"><img src="../assets/Logo_White.svg" alt="" /></a>
+    <a href="/" class="logo"><img src="../assets/Logo_White.svg" alt="" /></a>
   </div>
 </footer>
 
@@ -123,9 +125,11 @@
     cursor: pointer;
     padding-block: 2px;
   }
+
   a:hover {
     text-decoration: underline;
   }
+
   p {
     font-weight: var(--bold);
     padding-block: 15px;
@@ -142,18 +146,18 @@
 
   @media (max-width: 700px) {
     .links {
-    flex-direction: column;
+      flex-direction: column;
+    }
+    li {
+      align-items: center;
+    }
 
+    input[type="text"] {
+      width: 90%;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
   }
-  li {
-    align-items: center;
-    
-  }
-
-  input[type="text"] {
-    width: 90%;
-
-  }
-}
-
 </style>
